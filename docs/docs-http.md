@@ -1,47 +1,65 @@
 # 
 
-This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.
+TODO: Add a description
 
 
 
-## Server Configuration for Base URLs
+## Base URL
 
-This section provides details on the environments available and lists down the servers in each of the environment. The default environment for this API is set to `production` while the default server is set to `default`.
-### Environments
-
-An environment consists of a set of servers with base URL values. The environment can be changed programatically allowing rapid switching between different environments e.g.the user can specify a Production and Testing Environment.The available environments for this API are: 
-
-#### production
-The environment comprises of the following servers: 
-
-| Name | Base URL | 
-|-----------|-------------|
-| default | http://petstore.swagger.io/v2 |
-| auth server | http://petstore.swagger.io/oauth |
-
+The Base URL for this API is `https://api.example.com`
 
 
 
 ## Authentication
-The type of authentication used by this API is: `OAuth v2 Implicit Grant`
+This API uses `OAuth v2.0` with `bearer token`.
+
+
+
 
 
 
 # <a name="api_reference"></a>API Reference
 
-* [pet](#pet)
-* [store](#store)
-* [user](#user)
+* [Notes](#notes)
+* [Users](#users)
+* [Tags and Tagging Long Title](#tags_and_tagging_long_title)
 
-## <a name="pet"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "pet") pet
-
-
-### <a name="update_pet"></a>![Endpoint: ](https://apidocs.io/img/method.png "updatePet") updatePet
+## <a name="notes"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Notes") Notes
 
 
-**`PUT`** `/pet`
+### <a name="get_notes"></a>![Endpoint: ](https://apidocs.io/img/method.png "Get Notes") Get Notes
 
-> Update an existing pet
+
+**`GET`** `/notes`
+
+> Get a list of notes.
+
+
+
+
+#### Responses
+**200** 
+
+
+Body ([NoteData](#note_data)) 
+```
+[
+  {
+    "id": 1,
+    "title": "Grocery list",
+    "body": "Buy milk"
+  }
+]
+```
+
+
+### <a name="create_new_note"></a>![Endpoint: ](https://apidocs.io/img/method.png "Create New Note") Create New Note
+
+
+**`POST`** `/notes`
+
+> Create a new note using a title and an optional content body.
+
 
 
 
@@ -54,27 +72,13 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| `pet` |  ``` Required ```  | Pet object that needs to be added to the store | 
+| [Create New Note request](#create_new_note_request) |  ``` Required ```  | TODO: Add description | 
 
  Example 
 ``` 
 {
-  "name": "name",
-  "photoUrls": [
-    "photoUrls"
-  ],
-  "id": "5",
-  "category": {
-    "id": "5",
-    "name": "name"
-  },
-  "tags": [
-    {
-      "id": "5",
-      "name": "name"
-    }
-  ],
-  "status": "available"
+  "title": "My new note",
+  "body": "This is the body"
 }
 ``` 
 
@@ -85,791 +89,364 @@ Raw
 
 **400** 
 
-> Invalid ID supplied
+> Unexpected error in API call. See HTTP response body for details.
+
+
+### <a name="get_note"></a>![Endpoint: ](https://apidocs.io/img/method.png "Get Note") Get Note
+
+
+**`GET`** `/notes/{id}`
+
+> Get a single note.
+
+
+
+
+#### Path Parameters
+| Parameter | Type | Tags | Description | Example |
+|-----------|------| ---- |-------------| ----------------------------------- |
+| id | [string](#api_types) |  ``` Required ```  | The note ID | `68a5sdf67` | 
+
+#### Query Parameters
+| Parameter | Type | Tags | Description | Example |
+|-----------|------| ---- |-------------| -------------------------------- |
+| body | [boolean](#api_types) |  ``` Required ```  | Set to `false` to exclude note body content. | `false` | 
+
+#### Responses
+**200** 
+
+
+Body ([NoteData](#note_data)) 
+```
+{
+  "id": 1,
+  "title": "Grocery list",
+  "body": "Buy milk"
+}
+```
+
+
 **404** 
 
-> Pet not found
-**405** 
-
-> Validation exception
+> Unexpected error in API call. See HTTP response body for details.
 
 
-### <a name="add_pet"></a>![Endpoint: ](https://apidocs.io/img/method.png "addPet") addPet
+### <a name="update_a_note"></a>![Endpoint: ](https://apidocs.io/img/method.png "Update a Note") Update a Note
 
 
-**`POST`** `/pet`
+**`PUT`** `/notes/{id}`
 
-> Add a new pet to the store
+> Update a single note by setting the title and/or body.
+> ::: warning
+> #### <i class="fa fa-warning"></i> Caution
+> If the value for `title` or `body` is `null` or `undefined`, then the corresponding value is not modified on the server. However, if you send an empty string instead then it will **permanently overwrite** the original value.
+> :::
 
 
 
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
 
-#### Request Body
-Raw 
+#### Path Parameters
+| Parameter | Type | Tags | Description | Example |
+|-----------|------| ---- |-------------| ----------------------------------- |
+| id | [string](#api_types) |  ``` Required ```  | The note ID | `68a5sdf67` | 
 
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| `pet` |  ``` Required ```  | Pet object that needs to be added to the store | 
+#### Query Parameters
+| Parameter | Type | Tags | Description | Example |
+|-----------|------| ---- |-------------| -------------------------------- |
+| body | [string](#api_types) |  ``` Optional ```  | TODO: Add a parameter description | `"body"` | 
 
- Example 
-``` 
+#### Responses
+**200** 
+
+
+Body ([NoteData](#note_data)) 
+```
 {
-  "name": "name",
-  "photoUrls": [
-    "photoUrls"
-  ],
-  "id": "5",
-  "category": {
-    "id": "5",
-    "name": "name"
-  },
-  "tags": [
-    {
-      "id": "5",
-      "name": "name"
-    }
-  ],
-  "status": "available"
+  "id": 1,
+  "title": "Grocery list",
+  "body": "Buy milk"
 }
-``` 
+```
+
+
+**404** 
+
+> Unexpected error in API call. See HTTP response body for details.
+
+
+### <a name="delete_a_note"></a>![Endpoint: ](https://apidocs.io/img/method.png "Delete a Note") Delete a Note
+
+
+**`DELETE`** `/notes/{id}`
+
+> Delete a single note
+
+
+
+
+#### Path Parameters
+| Parameter | Type | Tags | Description | Example |
+|-----------|------| ---- |-------------| ----------------------------------- |
+| id | [string](#api_types) |  ``` Required ```  | The note ID | `68a5sdf67` | 
+
+#### Query Parameters
+| Parameter | Type | Tags | Description | Example |
+|-----------|------| ---- |-------------| -------------------------------- |
+| body | [string](#api_types) |  ``` Optional ```  | TODO: Add a parameter description | `"body"` | 
 
 #### Responses
 **200** 
 
 
 
-**405** 
+**404** 
 
-> Invalid input
-
-
-### <a name="find_pets_by_status"></a>![Endpoint: ](https://apidocs.io/img/method.png "findPetsByStatus") findPetsByStatus
+> Unexpected error in API call. See HTTP response body for details.
 
 
-**`GET`** `/pet/findByStatus`
+[Back to API Reference](#api_reference)
 
-> Finds Pets by status
+## <a name="users"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Users") Users
+
+
+### <a name="get_users"></a>![Endpoint: ](https://apidocs.io/img/method.png "Get users") Get users
+
+
+**`GET`** `/users`
+
+> Get a list of users. Example:
+> ```no-highlight
+> https://api.mywebsite.com/users?sort=joined&limit=5
+> ```
+
 
 
 
 #### Query Parameters
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| status | `Status7` |  ``` Required ```  ``` Collection ```  | Status values that need to be considered for filter | `["available"]` | 
+| Parameter | Type | Tags | Description | Example/Default |
+|-----------|------| ---- |-------------| -------------------------------- |
+| name | [string](#api_types) |  ``` Optional ```  | Search for a user by name | `alice` | 
+| joinedBefore | [string](#api_types) |  ``` Optional ```  | Search by join date | `2011-01-01` | 
+| joinedAfter | [string](#api_types) |  ``` Optional ```  | Search by join date | `2011-01-01` | 
+| sort | [sort](#sort) |  ``` Optional ```  | Which field to sort by | **Default:** `"name"` | 
+| limit | [number](#api_types) |  ``` Optional ```  | The maximum number of users to return, up to `50` | `25` | 
 
 #### Responses
 **200** 
 
-> successful operation
-Body (_Pet_) 
+
+Body ([Get users response](#get_users_response)) 
 ```
 [
   {
-    "name": "name",
-    "photoUrls": [
-      "photoUrls"
-    ],
-    "id": "5",
-    "category": {
-      "id": "5",
-      "name": "name"
-    },
-    "tags": [
-      {
-        "id": "5",
-        "name": "name"
-      }
-    ],
-    "status": "available"
-  }
-]
-```
-
-
-**400** 
-
-> Invalid status value
-
-
-### <a name="find_pets_by_tags"></a>![Endpoint: ](https://apidocs.io/img/method.png "findPetsByTags") findPetsByTags
-
-
-**`GET`** `/pet/findByTags`
-
-> Finds Pets by tags
-
-
-
-#### Query Parameters
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| tags | `string` |  ``` Required ```  ``` Collection ```  | Tags to filter by | `["tags"]` | 
-
-#### Responses
-**200** 
-
-> successful operation
-Body (_Pet_) 
-```
-[
-  {
-    "name": "name",
-    "photoUrls": [
-      "photoUrls"
-    ],
-    "id": "5",
-    "category": {
-      "id": "5",
-      "name": "name"
-    },
-    "tags": [
-      {
-        "id": "5",
-        "name": "name"
-      }
-    ],
-    "status": "available"
-  }
-]
-```
-
-
-**400** 
-
-> Invalid tag value
-
-
-### <a name="get_pet_by_id"></a>![Endpoint: ](https://apidocs.io/img/method.png "getPetById") getPetById
-
-
-**`GET`** `/pet/{petId}`
-
-> Find pet by ID
-
-
-
-#### Path Parameters
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| petId | `long` |  ``` Required ```  | ID of pet to return | `5` | 
-
-#### Responses
-**200** 
-
-> successful operation
-Body (_Pet_) 
-```
-{
-  "name": "name",
-  "photoUrls": [
-    "photoUrls"
-  ],
-  "id": "5",
-  "category": {
-    "id": "5",
-    "name": "name"
+    "name": "alice",
+    "image": "http://example.com/alice.jpg",
+    "joined": "2013-11-01"
   },
-  "tags": [
-    {
-      "id": "5",
-      "name": "name"
-    }
-  ],
-  "status": "available"
-}
-```
-
-
-**400** 
-
-> Invalid ID supplied
-**404** 
-
-> Pet not found
-
-
-### <a name="update_pet_with_form"></a>![Endpoint: ](https://apidocs.io/img/method.png "updatePetWithForm") updatePetWithForm
-
-
-**`POST`** `/pet/{petId}`
-
-> Updates a pet in the store with form data
-
-
-
-#### Path Parameters
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| petId | `long` |  ``` Required ```  | ID of pet that needs to be updated | `5` | 
-
-#### Request Headers
->Content-Type=application/x-www-form-urlencoded;
-
-#### Request Body
-Url Encoded
-
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| name | `string` |  ``` Optional ```  | Updated name of the pet | `"name"` | 
-| status | `string` |  ``` Optional ```  | Updated status of the pet | `"status"` | 
-
-#### Responses
-**200** 
-
-
-
-**405** 
-
-> Invalid input
-
-
-### <a name="delete_pet"></a>![Endpoint: ](https://apidocs.io/img/method.png "deletePet") deletePet
-
-
-**`DELETE`** `/pet/{petId}`
-
-> Deletes a pet
-
-
-
-#### Path Parameters
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| petId | `long` |  ``` Required ```  | Pet id to delete | `5` | 
-
-#### Request Headers
->api_key="api_key";
-
-#### Responses
-**200** 
-
-
-
-**400** 
-
-> Invalid ID supplied
-**404** 
-
-> Pet not found
-
-
-### <a name="upload_file"></a>![Endpoint: ](https://apidocs.io/img/method.png "uploadFile") uploadFile
-
-
-**`POST`** `/pet/{petId}/uploadImage`
-
-> uploads an image
-
-
-
-#### Path Parameters
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| petId | `long` |  ``` Required ```  | ID of pet to update | `5` | 
-
-#### Request Headers
->Content-Type=multipart/form-data;
-
-#### Request Body
-Multipart Form Data
-
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| additionalMetadata | `string` |  ``` Optional ```  | Additional data to pass to server | `"additionalMetadata"` | 
-| file | `file` |  ``` Optional ```  | file to upload | `` | 
-
-#### Responses
-**200** 
-
-> successful operation
-Body (_ApiResponse_) 
-```
-{
-  "code": 5,
-  "type": "type",
-  "message": "message"
-}
+  {
+    "name": "bob",
+    "image": "http://example.com/bob.jpg",
+    "joined": "2013-11-02"
+  }
+]
 ```
 
 
 [Back to API Reference](#api_reference)
 
-## <a name="store"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "store") store
+## <a name="tags_and_tagging_long_title"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Tags and Tagging Long Title") Tags and Tagging Long Title
 
 
-### <a name="get_inventory"></a>![Endpoint: ](https://apidocs.io/img/method.png "getInventory") getInventory
+### <a name="tags"></a>![Endpoint: ](https://apidocs.io/img/method.png "Tags") Tags
 
 
-**`GET`** `/store/inventory`
+**`GET`** `/tags`
 
-> Returns pet inventories by status
-
-
-
-#### Responses
-**200** 
-
-> successful operation
-Body (_number_) 
-```
-5
-```
-
-
-### <a name="place_order"></a>![Endpoint: ](https://apidocs.io/img/method.png "placeOrder") placeOrder
-
-
-**`POST`** `/store/order`
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Place an order for a pet
+> Get a list of bars
 
 
 
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| `order` |  ``` Required ```  | order placed for purchasing the pet | 
-
- Example 
-``` 
-{
-  "id": "5",
-  "petId": "5",
-  "quantity": 5,
-  "shipDate": "2017-08-09T07:35:45.4565372Z",
-  "status": "placed",
-  "complete": false
-}
-``` 
 
 #### Responses
 **200** 
 
-> successful operation
-Body (_Order_) 
+
+Body ([String](#api_types)) 
 ```
-{
-  "id": "5",
-  "petId": "5",
-  "quantity": 5,
-  "shipDate": "2017-08-09T07:35:45.4565372Z",
-  "status": "placed",
-  "complete": false
-}
+[
+  "tag1",
+  "tag2",
+  "tag3"
+]
 ```
 
 
-**400** 
-
-> Invalid Order
+### <a name="get_get_one_tag"></a>![Endpoint: ](https://apidocs.io/img/method.png "Get Get one tag") Get Get one tag
 
 
-### <a name="get_order_by_id"></a>![Endpoint: ](https://apidocs.io/img/method.png "getOrderById") getOrderById
+**`GET`** `/tags/{id}`
 
+> Get a single tag
 
-**`GET`** `/store/order/{orderId}`
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Find purchase order by ID
 
 
 
 #### Path Parameters
 | Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| orderId | `long` |  ``` Required ```  | ID of pet that needs to be fetched | `5` | 
-
-#### Responses
-**200** 
-
-> successful operation
-Body (_Order_) 
-```
-{
-  "id": "5",
-  "petId": "5",
-  "quantity": 5,
-  "shipDate": "2017-08-09T07:35:45.4565372Z",
-  "status": "placed",
-  "complete": false
-}
-```
-
-
-**400** 
-
-> Invalid ID supplied
-**404** 
-
-> Order not found
-
-
-### <a name="delete_order"></a>![Endpoint: ](https://apidocs.io/img/method.png "deleteOrder") deleteOrder
-
-
-**`DELETE`** `/store/order/{orderId}`
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Delete purchase order by ID
-
-
-
-#### Path Parameters
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| orderId | `long` |  ``` Required ```  | ID of the order that needs to be deleted | `5` | 
+|-----------|------| ---- |-------------| ----------------------------------- |
+| id | [string](#api_types) |  ``` Required ```  | Unique tag identifier | `"id"` | 
 
 #### Responses
 **200** 
 
 
-
-**400** 
-
-> Invalid ID supplied
-**404** 
-
-> Order not found
+Body
 
 
 [Back to API Reference](#api_reference)
 
-## <a name="user"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "user") user
+## <a name="api_types"></a>![Models: ](https://apidocs.io/img/class.png "API Types") API Types
 
+This section provides details on the available types. The primitive types available are:
 
-### <a name="create_user"></a>![Endpoint: ](https://apidocs.io/img/method.png "createUser") createUser
+| Type | Example |
+| ---- | -------- |
+| **string** | `hello world` |
+| **boolean** |	`true` |
+| **number** | `1` |
+| **precision** | `1.5` |
+| **datetime** | `2016-03-13T12:52:32.123Z` |
+| **date** | `2016-03-13` |
+|**void** | |
+| **dynamic** | |
+| **binary** | |
+| **long** | `12345678910` |
+| **file** | |
+| **uuid** | `0f8fad5b-d9cb-469f-a165-70867728950e` |
 
 
-**`POST`** `/user`
+In addition to the above types, the following complex types are also available:
+### <a name="note_data"></a>![Model: ](https://apidocs.io/img/method.png "NoteData") NoteData
 
-> *Tags:*  ``` Skips Authentication ``` 
 
-> Create user
 
+> TODO: Add a method description
 
 
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
 
-#### Request Body
-Raw 
 
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| `user` |  ``` Required ```  | Created user object | 
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| id | [precision](#api_types) |  ``` Required ```  | Unique identifier | 
+| title | [string](#api_types) |  ``` Required ```  | Single line description | 
+| body | [string](#api_types) |  ``` Optional ```  | Full description of the note which supports Markdown. | 
 
- Example 
-``` 
-{
-  "id": "5",
-  "username": "username",
-  "firstName": "firstName",
-  "lastName": "lastName",
-  "email": "email",
-  "password": "password",
-  "phone": "phone",
-  "userStatus": 5
-}
-``` 
 
-#### Responses
-**200** 
 
 
+### <a name="create_new_note_request"></a>![Model: ](https://apidocs.io/img/method.png "Create New Note request") Create New Note request
 
-**Default** 
 
-> successful operation
 
+> TODO: Add a method description
 
-### <a name="create_users_with_array_input"></a>![Endpoint: ](https://apidocs.io/img/method.png "createUsersWithArrayInput") createUsersWithArrayInput
 
 
-**`POST`** `/user/createWithArray`
 
-> *Tags:*  ``` Skips Authentication ``` 
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| title | [string](#api_types) |  ``` Required ```  | TODO: Add a property description | 
+| body | [string](#api_types) |  ``` Required ```  | TODO: Add a property description | 
 
-> Creates list of users with given input array
 
 
 
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
+### <a name="create_new_note_request3"></a>![Model: ](https://apidocs.io/img/method.png "Create New Note request3") Create New Note request3
 
-#### Request Body
-Raw 
 
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| `user` |  ``` Required ```  ``` Collection ```  | List of user object | 
 
- Example 
-``` 
-[
-  {
-    "id": "5",
-    "username": "username",
-    "firstName": "firstName",
-    "lastName": "lastName",
-    "email": "email",
-    "password": "password",
-    "phone": "phone",
-    "userStatus": 5
-  }
-]
-``` 
+> TODO: Add a method description
 
-#### Responses
-**200** 
 
 
 
-**Default** 
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| title | [string](#api_types) |  ``` Required ```  | TODO: Add a property description | 
 
-> successful operation
 
 
-### <a name="create_users_with_list_input"></a>![Endpoint: ](https://apidocs.io/img/method.png "createUsersWithListInput") createUsersWithListInput
 
+### <a name="update_a_note_request"></a>![Model: ](https://apidocs.io/img/method.png "Update a Note request") Update a Note request
 
-**`POST`** `/user/createWithList`
 
-> *Tags:*  ``` Skips Authentication ``` 
 
-> Creates list of users with given input array
+> TODO: Add a method description
 
 
 
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
 
-#### Request Body
-Raw 
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| title | [string](#api_types) |  ``` Required ```  | TODO: Add a property description | 
 
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| `user` |  ``` Required ```  ``` Collection ```  | List of user object | 
 
- Example 
-``` 
-[
-  {
-    "id": "97",
-    "username": "username",
-    "firstName": "firstName",
-    "lastName": "lastName",
-    "email": "email",
-    "password": "password",
-    "phone": "phone",
-    "userStatus": 97
-  }
-]
-``` 
 
-#### Responses
-**200** 
 
+### <a name="update_a_note_request7"></a>![Model: ](https://apidocs.io/img/method.png "Update a Note request7") Update a Note request7
 
 
-**Default** 
 
-> successful operation
+> TODO: Add a method description
 
 
-### <a name="login_user"></a>![Endpoint: ](https://apidocs.io/img/method.png "loginUser") loginUser
 
 
-**`GET`** `/user/login`
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| body | [string](#api_types) |  ``` Required ```  | TODO: Add a property description | 
 
-> *Tags:*  ``` Skips Authentication ``` 
 
-> Logs user into the system
 
 
+### <a name="sort"></a>![Model: ](https://apidocs.io/img/method.png "sort") sort
 
-#### Query Parameters
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| username | `string` |  ``` Required ```  | The user name for login | `"username"` | 
-| password | `string` |  ``` Required ```  | The password for login in clear text | `"password"` | 
 
-#### Responses
-**200** 
 
-> successful operation
-Body (_string_) 
-```
-"body"
-```
+> TODO: Add a method description
 
 
-**400** 
 
-> Invalid username/password supplied
 
+This type must take a value from the following [string](#api_types) enumeration of values:
 
-### <a name="logout_user"></a>![Endpoint: ](https://apidocs.io/img/method.png "logoutUser") logoutUser
+| Value | Description |
+| ----- | --------------- |
+| `name` | TODO: Add description | 
+| `joined` | TODO: Add description | 
+| `-joined` | TODO: Add description | 
+| `age` | TODO: Add description | 
+| `-age` | TODO: Add description | 
+| `location` | TODO: Add description | 
+| `-location` | TODO: Add description | 
+| `plan` | TODO: Add description | 
+| `-plan` | TODO: Add description | 
 
 
-**`GET`** `/user/logout`
 
-> *Tags:*  ``` Skips Authentication ``` 
 
-> Logs out current logged in user session
+### <a name="get_users_response"></a>![Model: ](https://apidocs.io/img/method.png "Get users response") Get users response
 
 
 
-#### Responses
-**200** 
+> TODO: Add a method description
 
 
 
-**Default** 
 
-> successful operation
-
-
-### <a name="get_user_by_name"></a>![Endpoint: ](https://apidocs.io/img/method.png "getUserByName") getUserByName
-
-
-**`GET`** `/user/{username}`
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Get user by user name
-
-
-
-#### Path Parameters
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| username | `string` |  ``` Required ```  | The name that needs to be fetched. Use user1 for testing. | `"username"` | 
-
-#### Responses
-**200** 
-
-> successful operation
-Body (_User_) 
-```
-{
-  "id": "97",
-  "username": "username",
-  "firstName": "firstName",
-  "lastName": "lastName",
-  "email": "email",
-  "password": "password",
-  "phone": "phone",
-  "userStatus": 97
-}
-```
-
-
-**400** 
-
-> Invalid username supplied
-**404** 
-
-> User not found
-
-
-### <a name="update_user"></a>![Endpoint: ](https://apidocs.io/img/method.png "updateUser") updateUser
-
-
-**`PUT`** `/user/{username}`
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Updated user
-
-
-
-#### Path Parameters
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| username | `string` |  ``` Required ```  | name that need to be updated | `"username"` | 
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| `user` |  ``` Required ```  | Updated user object | 
-
- Example 
-``` 
-{
-  "id": "97",
-  "username": "username",
-  "firstName": "firstName",
-  "lastName": "lastName",
-  "email": "email",
-  "password": "password",
-  "phone": "phone",
-  "userStatus": 97
-}
-``` 
-
-#### Responses
-**200** 
-
-
-
-**400** 
-
-> Invalid user supplied
-**404** 
-
-> User not found
-
-
-### <a name="delete_user"></a>![Endpoint: ](https://apidocs.io/img/method.png "deleteUser") deleteUser
-
-
-**`DELETE`** `/user/{username}`
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Delete user
-
-
-
-#### Path Parameters
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| ------- |
-| username | `string` |  ``` Required ```  | The name that needs to be deleted | `"username"` | 
-
-#### Responses
-**200** 
-
-
-
-**400** 
-
-> Invalid username supplied
-**404** 
-
-> User not found
-
-
-[Back to API Reference](#api_reference)
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| name | [string](#api_types) |  ``` Required ```  | TODO: Add a property description | 
+| image | [string](#api_types) |  ``` Required ```  | TODO: Add a property description | 
+| joined | [string](#api_types) |  ``` Required ```  | TODO: Add a property description |
 

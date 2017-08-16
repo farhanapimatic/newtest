@@ -1,6 +1,6 @@
 # Getting started
 
-This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.
+TODO: Add a description
 
 ## How to Build
 
@@ -13,50 +13,50 @@ Open command prompt and type ```pod --version```. This should display the curren
 Using command line, navigate to the directory containing the generated files (including ```PodFile```) for the SDK. 
 Run the command ```pod install```. This should install all the required dependencies and create the ```pods``` directory in your project directory.
 
-![Installing dependencies using Cocoapods](https://apidocs.io/illustration/objc?step=AddDependencies&workspaceFolder=Swagger%20Petstore-ObjC&workspaceName=SwaggerPetstore&projectName=SwaggerPetstore&rootNamespace=SwaggerPetstore)
+![Installing dependencies using Cocoapods](https://apidocs.io/illustration/objc?step=AddDependencies&workspaceFolder=API%20Title-ObjC&workspaceName=APITitle&projectName=APITitle&rootNamespace=APITitle)
 
-Open the project workspace using the (SwaggerPetstore.xcworkspace) file. Invoke the build process using `Command(⌘)+B` shortcut key or using the `Build` menu as shown below.
+Open the project workspace using the (APITitle.xcworkspace) file. Invoke the build process using `Command(⌘)+B` shortcut key or using the `Build` menu as shown below.
 
-![Building SDK using Xcode](https://apidocs.io/illustration/objc?step=BuildSDK&workspaceFolder=Swagger%20Petstore-ObjC&workspaceName=SwaggerPetstore&projectName=SwaggerPetstore&rootNamespace=SwaggerPetstore)
+![Building SDK using Xcode](https://apidocs.io/illustration/objc?step=BuildSDK&workspaceFolder=API%20Title-ObjC&workspaceName=APITitle&projectName=APITitle&rootNamespace=APITitle)
 
 
 ## How to Use
 
 The generated code is a Cocoa Touch Static Library which can be used in any iOS project. The support for these generated libraries go all the way back to iOS 6.
 
-The following section explains how to use the SwaggerPetstore library in a new iOS project.     
+The following section explains how to use the APITitle library in a new iOS project.     
 ### 1. Starting a new project
 To start a new project, left-click on the ```Create a new Xcode project```.
-![Create Test Project - Step 1](https://apidocs.io/illustration/objc?step=Test1&workspaceFolder=Swagger%20Petstore-ObjC&workspaceName=SwaggerPetstore&projectName=SwaggerPetstore&rootNamespace=SwaggerPetstore)
+![Create Test Project - Step 1](https://apidocs.io/illustration/objc?step=Test1&workspaceFolder=API%20Title-ObjC&workspaceName=APITitle&projectName=APITitle&rootNamespace=APITitle)
 
 Next, choose **Single View Application** and click ```Next```.
-![Create Test Project - Step 2](https://apidocs.io/illustration/objc?step=Test2&workspaceFolder=Swagger%20Petstore-ObjC&workspaceName=SwaggerPetstore&projectName=SwaggerPetstore&rootNamespace=SwaggerPetstore)
+![Create Test Project - Step 2](https://apidocs.io/illustration/objc?step=Test2&workspaceFolder=API%20Title-ObjC&workspaceName=APITitle&projectName=APITitle&rootNamespace=APITitle)
 
 Provide **Test-Project** as the product name click ```Next```.
-![Create Test Project - Step 3](https://apidocs.io/illustration/objc?step=Test3&workspaceFolder=Swagger%20Petstore-ObjC&workspaceName=SwaggerPetstore&projectName=SwaggerPetstore&rootNamespace=SwaggerPetstore)
+![Create Test Project - Step 3](https://apidocs.io/illustration/objc?step=Test3&workspaceFolder=API%20Title-ObjC&workspaceName=APITitle&projectName=APITitle&rootNamespace=APITitle)
 
 Choose the desired location of your project folder and click ```Create```.
-![Create Test Project - Step 4](https://apidocs.io/illustration/objc?step=Test4&workspaceFolder=Swagger%20Petstore-ObjC&workspaceName=SwaggerPetstore&projectName=SwaggerPetstore&rootNamespace=SwaggerPetstore)
+![Create Test Project - Step 4](https://apidocs.io/illustration/objc?step=Test4&workspaceFolder=API%20Title-ObjC&workspaceName=APITitle&projectName=APITitle&rootNamespace=APITitle)
 
 ### 2. Adding the static library dependency
 To add this dependency open a terminal and navigate to your project folder. Next, input ```pod init``` and press enter.
-![Add dependency - Step 1](https://apidocs.io/illustration/objc?step=Add0&workspaceFolder=Swagger%20Petstore-ObjC&workspaceName=SwaggerPetstore&projectName=SwaggerPetstore&rootNamespace=SwaggerPetstore)
+![Add dependency - Step 1](https://apidocs.io/illustration/objc?step=Add0&workspaceFolder=API%20Title-ObjC&workspaceName=APITitle&projectName=APITitle&rootNamespace=APITitle)
 
-Next, open the newly created ```PodFile``` in your favourite text editor. Add the following line : pod 'SwaggerPetstore', :path => 'Vendor/SwaggerPetstore'
-![Add dependency - Step 2](https://apidocs.io/illustration/objc?step=Add1&workspaceFolder=Swagger%20Petstore-ObjC&workspaceName=SwaggerPetstore&projectName=SwaggerPetstore&rootNamespace=SwaggerPetstore)
+Next, open the newly created ```PodFile``` in your favourite text editor. Add the following line : pod 'APITitle', :path => 'Vendor/APITitle'
+![Add dependency - Step 2](https://apidocs.io/illustration/objc?step=Add1&workspaceFolder=API%20Title-ObjC&workspaceName=APITitle&projectName=APITitle&rootNamespace=APITitle)
 
 Execute `pod install` from terminal to install the dependecy in your project. This would add the dependency to the newly created test project.
-![Add dependency - Step 3](https://apidocs.io/illustration/objc?step=Add2&workspaceFolder=Swagger%20Petstore-ObjC&workspaceName=SwaggerPetstore&projectName=SwaggerPetstore&rootNamespace=SwaggerPetstore)
+![Add dependency - Step 3](https://apidocs.io/illustration/objc?step=Add2&workspaceFolder=API%20Title-ObjC&workspaceName=APITitle&projectName=APITitle&rootNamespace=APITitle)
 
 
 ## How to Test
 
 Unit tests in this SDK can be run using Xcode. 
 
-First build the SDK as shown in the steps above and naivgate to the project directory and open the SwaggerPetstore.xcworkspace file.
+First build the SDK as shown in the steps above and naivgate to the project directory and open the APITitle.xcworkspace file.
 
 Go to the test explorer in Xcode as shown in the picture below and click on `run tests` from the menu. 
-![Run tests](https://apidocs.io/illustration/objc?step=RunTests&workspaceFolder=Swagger%20Petstore-ObjC&workspaceName=SwaggerPetstore&projectName=SwaggerPetstore&rootNamespace=SwaggerPetstore)
+![Run tests](https://apidocs.io/illustration/objc?step=RunTests&workspaceFolder=API%20Title-ObjC&workspaceName=APITitle&projectName=APITitle&rootNamespace=APITitle)
 
 
 ## Initialization
@@ -66,16 +66,14 @@ In order to setup authentication and initialization of the API client, you need 
 
 | Parameter | Description |
 |-----------|-------------|
-| oAuthClientId | OAuth 2 Client ID |
-| oAuthRedirectUri | OAuth 2 Redirection endpoint or Callback Uri |
+| oAuthAccessToken | OAuth 2.0 Access Token |
 
 
 
 Configuration variables can be set as following.
 ```Objc
 // Configuration parameters and credentials
-Configuration_OAuthClientId = "Configuration_OAuthClientId"; // OAuth 2 Client ID
-Configuration_OAuthRedirectUri = "Configuration_OAuthRedirectUri"; // OAuth 2 Redirection endpoint or Callback Uri
+Configuration_OAuthAccessToken = "Configuration_OAuthAccessToken"; // OAuth 2.0 Access Token
 
 ```
 
@@ -83,32 +81,53 @@ Configuration_OAuthRedirectUri = "Configuration_OAuthRedirectUri"; // OAuth 2 Re
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [PetController](#pet_controller)
-* [StoreController](#store_controller)
-* [UserController](#user_controller)
+* [NotesController](#notes_controller)
+* [UsersController](#users_controller)
+* [TagsAndTaggingLongTitleController](#tags_and_tagging_long_title_controller)
 
-## <a name="pet_controller"></a>![Class: ](https://apidocs.io/img/class.png ".PetController") PetController
+## <a name="notes_controller"></a>![Class: ](https://apidocs.io/img/class.png ".NotesController") NotesController
 
 ### Get singleton instance
 ```objc
-Pet* pet = [[Pet alloc]init] ;
+Notes* notes = [[Notes alloc]init] ;
 ```
 
-### <a name="update_pet_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.updatePetAsyncWithBody") updatePetAsyncWithBody
+### <a name="get_notes_with_completion_block"></a>![Method: ](https://apidocs.io/img/method.png ".NotesController.getNotesWithCompletionBlock") getNotesWithCompletionBlock
 
-> Update an existing pet
+> Get a list of notes.
 
 
 ```objc
-function updatePetAsyncWithBody:(Pet*) body
-                completionBlock:(CompletedPutUpdatePet) onCompleted(body)
+function getNotesWithCompletionBlock:(CompletedGetNotes) onCompleted()
+```
+
+
+
+#### Example Usage
+
+```objc
+
+    [self.notes getNotesWithCompletionBlock:  ^(BOOL success, HttpContext* context, NSArray<NoteData> * response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="create_new_note_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".NotesController.createNewNoteAsyncWithBody") createNewNoteAsyncWithBody
+
+> Create a new note using a title and an optional content body.
+
+
+```objc
+function createNewNoteAsyncWithBody:(CreateNewNoteRequest*) body
+                completionBlock:(CompletedPostCreateNewNote) onCompleted(body)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | Pet object that needs to be added to the store |
+| body |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -118,9 +137,10 @@ function updatePetAsyncWithBody:(Pet*) body
 
 ```objc
     // Parameters for the API call
-    Pet* body = [[Pet alloc]init];
+    CreateNewNoteRequest* body = (CreateNewNoteRequest*) [APIHelper jsonDeserialize: @"{    \"title\": \"My new note\",    \"body\": \"This is the body\"}"
+                toClass: CreateNewNoteRequest.class];
 
-    [self.pet updatePetAsyncWithBody: body  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
+    [self.notes createNewNoteAsyncWithBody: body  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
        //Add code here
     }];
 ```
@@ -129,27 +149,27 @@ function updatePetAsyncWithBody:(Pet*) body
 
 | Error Code | Error Description |
 |------------|-------------------|
-| 400 | Invalid ID supplied |
-| 404 | Pet not found |
-| 405 | Validation exception |
+| 400 | Unexpected error in API call. See HTTP response body for details. |
 
 
 
-### <a name="add_pet_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.addPetAsyncWithBody") addPetAsyncWithBody
+### <a name="get_note_async_with_id"></a>![Method: ](https://apidocs.io/img/method.png ".NotesController.getNoteAsyncWithId") getNoteAsyncWithId
 
-> Add a new pet to the store
+> Get a single note.
 
 
 ```objc
-function addPetAsyncWithBody:(Pet*) body
-                completionBlock:(CompletedPostAddPet) onCompleted(body)
+function getNoteAsyncWithId:(NSString*) mid
+                body:(BOOL) body
+                completionBlock:(CompletedGetNote) onCompleted(mid body : body)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | Pet object that needs to be added to the store |
+| mid |  ``` Required ```  | The note ID |
+| body |  ``` Required ```  | Set to `false` to exclude note body content. |
 
 
 
@@ -159,9 +179,10 @@ function addPetAsyncWithBody:(Pet*) body
 
 ```objc
     // Parameters for the API call
-    Pet* body = [[Pet alloc]init];
+    NSString* mid = @"68a5sdf67";
+    BOOL body = [@"false" boolValue];
 
-    [self.pet addPetAsyncWithBody: body  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
+    [self.notes getNoteAsyncWithId: mid body : body  completionBlock:^(BOOL success, HttpContext* context, NoteData* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -170,25 +191,31 @@ function addPetAsyncWithBody:(Pet*) body
 
 | Error Code | Error Description |
 |------------|-------------------|
-| 405 | Invalid input |
+| 404 | Unexpected error in API call. See HTTP response body for details. |
 
 
 
-### <a name="find_pets_by_status_async_with_status"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.findPetsByStatusAsyncWithStatus") findPetsByStatusAsyncWithStatus
+### <a name="update_a_note_async_with_id"></a>![Method: ](https://apidocs.io/img/method.png ".NotesController.updateANoteAsyncWithId") updateANoteAsyncWithId
 
-> Finds Pets by status
+> Update a single note by setting the title and/or body.
+> ::: warning
+> #### <i class="fa fa-warning"></i> Caution
+> If the value for `title` or `body` is `null` or `undefined`, then the corresponding value is not modified on the server. However, if you send an empty string instead then it will **permanently overwrite** the original value.
+> :::
 
 
 ```objc
-function findPetsByStatusAsyncWithStatus:(NSArray<NSNumber*>*) status
-                completionBlock:(CompletedGetFindPetsByStatus) onCompleted(status)
+function updateANoteAsyncWithId:(NSString*) mid
+                body:(NSString*) body
+                completionBlock:(CompletedPutUpdateANote) onCompleted(mid body : body)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| status |  ``` Required ```  ``` Collection ```  | Status values that need to be considered for filter |
+| mid |  ``` Required ```  | The note ID |
+| body |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 
@@ -198,9 +225,10 @@ function findPetsByStatusAsyncWithStatus:(NSArray<NSNumber*>*) status
 
 ```objc
     // Parameters for the API call
-    NSArray<NSNumber*>* status = @[available,available,available];
+    NSString* mid = @"68a5sdf67";
+    NSString* body = @"body";
 
-    [self.pet findPetsByStatusAsyncWithStatus: status  completionBlock:^(BOOL success, HttpContext* context, NSArray<Pet> * response, NSError* error) { 
+    [self.notes updateANoteAsyncWithId: mid body : body  completionBlock:^(BOOL success, HttpContext* context, NoteData* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -209,25 +237,27 @@ function findPetsByStatusAsyncWithStatus:(NSArray<NSNumber*>*) status
 
 | Error Code | Error Description |
 |------------|-------------------|
-| 400 | Invalid status value |
+| 404 | Unexpected error in API call. See HTTP response body for details. |
 
 
 
-### <a name="find_pets_by_tags_async_with_tags"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.findPetsByTagsAsyncWithTags") findPetsByTagsAsyncWithTags
+### <a name="delete_a_note_async_with_id"></a>![Method: ](https://apidocs.io/img/method.png ".NotesController.deleteANoteAsyncWithId") deleteANoteAsyncWithId
 
-> Finds Pets by tags
+> Delete a single note
 
 
 ```objc
-function findPetsByTagsAsyncWithTags:(NSArray*) tags
-                completionBlock:(CompletedGetFindPetsByTags) onCompleted(tags)
+function deleteANoteAsyncWithId:(NSString*) mid
+                body:(NSString*) body
+                completionBlock:(CompletedDeleteANote) onCompleted(mid body : body)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| tags |  ``` Required ```  ``` Collection ```  | Tags to filter by |
+| mid |  ``` Required ```  | The note ID |
+| body |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 
@@ -237,9 +267,10 @@ function findPetsByTagsAsyncWithTags:(NSArray*) tags
 
 ```objc
     // Parameters for the API call
-    NSArray* tags = @[@"tags",@"tags",@"tags"];
+    NSString* mid = @"68a5sdf67";
+    NSString* body = @"body";
 
-    [self.pet findPetsByTagsAsyncWithTags: tags  completionBlock:^(BOOL success, HttpContext* context, NSArray<Pet> * response, NSError* error) { 
+    [self.notes deleteANoteAsyncWithId: mid body : body  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
        //Add code here
     }];
 ```
@@ -248,25 +279,45 @@ function findPetsByTagsAsyncWithTags:(NSArray*) tags
 
 | Error Code | Error Description |
 |------------|-------------------|
-| 400 | Invalid tag value |
+| 404 | Unexpected error in API call. See HTTP response body for details. |
 
 
 
-### <a name="get_pet_by_id_async_with_pet_id"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.getPetByIdAsyncWithPetId") getPetByIdAsyncWithPetId
+[Back to List of Controllers](#list_of_controllers)
 
-> Find pet by ID
+## <a name="users_controller"></a>![Class: ](https://apidocs.io/img/class.png ".UsersController") UsersController
+
+### Get singleton instance
+```objc
+Users* users = [[Users alloc]init] ;
+```
+
+### <a name="get_users_async_with_name"></a>![Method: ](https://apidocs.io/img/method.png ".UsersController.getUsersAsyncWithName") getUsersAsyncWithName
+
+> Get a list of users. Example:
+> ```no-highlight
+> https://api.mywebsite.com/users?sort=joined&limit=5
+> ```
 
 
 ```objc
-function getPetByIdAsyncWithPetId:(long) petId
-                completionBlock:(CompletedGetPetById) onCompleted(petId)
+function getUsersAsyncWithName:(NSString*) name
+                joinedBefore:(NSString*) joinedBefore
+                joinedAfter:(NSString*) joinedAfter
+                sort:(enum SortEnum) sort
+                limit:(NSNumber*) limit
+                completionBlock:(CompletedGetUsers) onCompleted(name joinedBefore : joinedBefore joinedAfter : joinedAfter sort : sort limit : limit)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| petId |  ``` Required ```  | ID of pet to return |
+| name |  ``` Optional ```  | Search for a user by name |
+| joinedBefore |  ``` Optional ```  | Search by join date |
+| joinedAfter |  ``` Optional ```  | Search by join date |
+| sort |  ``` Optional ```  ``` DefaultValue ```  | Which field to sort by |
+| limit |  ``` Optional ```  | The maximum number of users to return, up to `50` |
 
 
 
@@ -276,143 +327,13 @@ function getPetByIdAsyncWithPetId:(long) petId
 
 ```objc
     // Parameters for the API call
-    long petId = 19;
+    NSString* name = @"alice";
+    NSString* joinedBefore = @"2011-01-01";
+    NSString* joinedAfter = @"2011-01-01";
+    SortEnum sort = (enum SortEnum) [SortEnumHelper sortEnumFromString: @"joined"];
+    NSNumber* limit = [NSNumber numberWithInteger:[@"25" integerValue]];
 
-    [self.pet getPetByIdAsyncWithPetId: petId  completionBlock:^(BOOL success, HttpContext* context, Pet* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid ID supplied |
-| 404 | Pet not found |
-
-
-
-### <a name="update_pet_with_form_async_with_pet_id"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.updatePetWithFormAsyncWithPetId") updatePetWithFormAsyncWithPetId
-
-> Updates a pet in the store with form data
-
-
-```objc
-function updatePetWithFormAsyncWithPetId:(long) petId
-                name:(NSString*) name
-                status:(NSString*) status
-                completionBlock:(CompletedPostUpdatePetWithForm) onCompleted(petId name : name status : status)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| petId |  ``` Required ```  | ID of pet that needs to be updated |
-| name |  ``` Optional ```  | Updated name of the pet |
-| status |  ``` Optional ```  | Updated status of the pet |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    long petId = 19;
-    NSString* name = @"name";
-    NSString* status = @"status";
-
-    [self.pet updatePetWithFormAsyncWithPetId: petId name : name status : status  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
-       //Add code here
-    }];
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 405 | Invalid input |
-
-
-
-### <a name="delete_pet_async_with_pet_id"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.deletePetAsyncWithPetId") deletePetAsyncWithPetId
-
-> Deletes a pet
-
-
-```objc
-function deletePetAsyncWithPetId:(long) petId
-                apiKey:(NSString*) apiKey
-                completionBlock:(CompletedDeletePet) onCompleted(petId apiKey : apiKey)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| petId |  ``` Required ```  | Pet id to delete |
-| apiKey |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    long petId = 19;
-    NSString* apiKey = @"api_key";
-
-    [self.pet deletePetAsyncWithPetId: petId apiKey : apiKey  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
-       //Add code here
-    }];
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid ID supplied |
-| 404 | Pet not found |
-
-
-
-### <a name="upload_file_async_with_pet_id"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.uploadFileAsyncWithPetId") uploadFileAsyncWithPetId
-
-> uploads an image
-
-
-```objc
-function uploadFileAsyncWithPetId:(long) petId
-                additionalMetadata:(NSString*) additionalMetadata
-                file:(NSURL*) file
-                completionBlock:(CompletedPostUploadFile) onCompleted(petId additionalMetadata : additionalMetadata file : file)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| petId |  ``` Required ```  | ID of pet to update |
-| additionalMetadata |  ``` Optional ```  | Additional data to pass to server |
-| file |  ``` Optional ```  | file to upload |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    long petId = 19;
-    NSString* additionalMetadata = @"additionalMetadata";
-    NSURL* file = [NSURL URLWithString: @"pathtofile"];
-
-    [self.pet uploadFileAsyncWithPetId: petId additionalMetadata : additionalMetadata file : file  completionBlock:^(BOOL success, HttpContext* context, ApiResponse* response, NSError* error) { 
+    [self.users getUsersAsyncWithName: name joinedBefore : joinedBefore joinedAfter : joinedAfter sort : sort limit : limit  completionBlock:^(BOOL success, HttpContext* context, NSArray<GetUsersResponse> * response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -420,20 +341,20 @@ function uploadFileAsyncWithPetId:(long) petId
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="store_controller"></a>![Class: ](https://apidocs.io/img/class.png ".StoreController") StoreController
+## <a name="tags_and_tagging_long_title_controller"></a>![Class: ](https://apidocs.io/img/class.png ".TagsAndTaggingLongTitleController") TagsAndTaggingLongTitleController
 
 ### Get singleton instance
 ```objc
-Store* store = [[Store alloc]init] ;
+TagsAndTaggingLongTitle* tagsAndTaggingLongTitle = [[TagsAndTaggingLongTitle alloc]init] ;
 ```
 
-### <a name="get_inventory_with_completion_block"></a>![Method: ](https://apidocs.io/img/method.png ".StoreController.getInventoryWithCompletionBlock") getInventoryWithCompletionBlock
+### <a name="get_tags_with_completion_block"></a>![Method: ](https://apidocs.io/img/method.png ".TagsAndTaggingLongTitleController.getTagsWithCompletionBlock") getTagsWithCompletionBlock
 
-> Returns pet inventories by status
+> Get a list of bars
 
 
 ```objc
-function getInventoryWithCompletionBlock:(CompletedGetInventory) onCompleted()
+function getTagsWithCompletionBlock:(CompletedGetTags) onCompleted()
 ```
 
 
@@ -442,29 +363,27 @@ function getInventoryWithCompletionBlock:(CompletedGetInventory) onCompleted()
 
 ```objc
 
-    [self.store getInventoryWithCompletionBlock:  ^(BOOL success, HttpContext* context, NSNumber* response, NSError* error) { 
+    [self.tagsAndTaggingLongTitle getTagsWithCompletionBlock:  ^(BOOL success, HttpContext* context, NSArray* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_place_order_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".StoreController.createPlaceOrderAsyncWithBody") createPlaceOrderAsyncWithBody
+### <a name="get_get_one_tag_async_with_id"></a>![Method: ](https://apidocs.io/img/method.png ".TagsAndTaggingLongTitleController.getGetOneTagAsyncWithId") getGetOneTagAsyncWithId
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Place an order for a pet
+> Get a single tag
 
 
 ```objc
-function createPlaceOrderAsyncWithBody:(Order*) body
-                completionBlock:(CompletedPostPlaceOrder) onCompleted(body)
+function getGetOneTagAsyncWithId:(NSString*) mid
+                completionBlock:(CompletedGetGetOneTag) onCompleted(mid)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | order placed for purchasing the pet |
+| mid |  ``` Required ```  | Unique tag identifier |
 
 
 
@@ -474,440 +393,12 @@ function createPlaceOrderAsyncWithBody:(Order*) body
 
 ```objc
     // Parameters for the API call
-    Order* body = [[Order alloc]init];
+    NSString* mid = @"id";
 
-    [self.store createPlaceOrderAsyncWithBody: body  completionBlock:^(BOOL success, HttpContext* context, Order* response, NSError* error) { 
+    [self.tagsAndTaggingLongTitle getGetOneTagAsyncWithId: mid  completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
        //Add code here
     }];
 ```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid Order |
-
-
-
-### <a name="get_order_by_id_async_with_order_id"></a>![Method: ](https://apidocs.io/img/method.png ".StoreController.getOrderByIdAsyncWithOrderId") getOrderByIdAsyncWithOrderId
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Find purchase order by ID
-
-
-```objc
-function getOrderByIdAsyncWithOrderId:(long) orderId
-                completionBlock:(CompletedGetOrderById) onCompleted(orderId)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| orderId |  ``` Required ```  | ID of pet that needs to be fetched |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    long orderId = 233;
-
-    [self.store getOrderByIdAsyncWithOrderId: orderId  completionBlock:^(BOOL success, HttpContext* context, Order* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid ID supplied |
-| 404 | Order not found |
-
-
-
-### <a name="delete_order_async_with_order_id"></a>![Method: ](https://apidocs.io/img/method.png ".StoreController.deleteOrderAsyncWithOrderId") deleteOrderAsyncWithOrderId
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Delete purchase order by ID
-
-
-```objc
-function deleteOrderAsyncWithOrderId:(long) orderId
-                completionBlock:(CompletedDeleteOrder) onCompleted(orderId)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| orderId |  ``` Required ```  | ID of the order that needs to be deleted |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    long orderId = 233;
-
-    [self.store deleteOrderAsyncWithOrderId: orderId  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
-       //Add code here
-    }];
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid ID supplied |
-| 404 | Order not found |
-
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="user_controller"></a>![Class: ](https://apidocs.io/img/class.png ".UserController") UserController
-
-### Get singleton instance
-```objc
-User* user = [[User alloc]init] ;
-```
-
-### <a name="create_user_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.createUserAsyncWithBody") createUserAsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Create user
-
-
-```objc
-function createUserAsyncWithBody:(User*) body
-                completionBlock:(CompletedPostCreateUser) onCompleted(body)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | Created user object |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    User* body = [[User alloc]init];
-
-    [self.user createUserAsyncWithBody: body  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
-       //Add code here
-    }];
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 0 | successful operation |
-
-
-
-### <a name="create_users_with_array_input_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.createUsersWithArrayInputAsyncWithBody") createUsersWithArrayInputAsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Creates list of users with given input array
-
-
-```objc
-function createUsersWithArrayInputAsyncWithBody:(NSArray<User> *) body
-                completionBlock:(CompletedPostCreateUsersWithArrayInput) onCompleted(body)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  ``` Collection ```  | List of user object |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    NSArray<User> * body = (NSArray<User>*) [User arrayOfModelsFromDictionaries:
-                [APIHelper jsonDeserializeArray: @"nil"] error: nil];
-
-    [self.user createUsersWithArrayInputAsyncWithBody: body  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
-       //Add code here
-    }];
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 0 | successful operation |
-
-
-
-### <a name="create_users_with_list_input_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.createUsersWithListInputAsyncWithBody") createUsersWithListInputAsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Creates list of users with given input array
-
-
-```objc
-function createUsersWithListInputAsyncWithBody:(NSArray<User> *) body
-                completionBlock:(CompletedPostCreateUsersWithListInput) onCompleted(body)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  ``` Collection ```  | List of user object |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    NSArray<User> * body = (NSArray<User>*) [User arrayOfModelsFromDictionaries:
-                [APIHelper jsonDeserializeArray: @"nil"] error: nil];
-
-    [self.user createUsersWithListInputAsyncWithBody: body  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
-       //Add code here
-    }];
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 0 | successful operation |
-
-
-
-### <a name="get_login_user_async_with_username"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.getLoginUserAsyncWithUsername") getLoginUserAsyncWithUsername
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Logs user into the system
-
-
-```objc
-function getLoginUserAsyncWithUsername:(NSString*) username
-                password:(NSString*) password
-                completionBlock:(CompletedGetLoginUser) onCompleted(username password : password)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| username |  ``` Required ```  | The user name for login |
-| password |  ``` Required ```  | The password for login in clear text |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    NSString* username = @"username";
-    NSString* password = @"password";
-
-    [self.user getLoginUserAsyncWithUsername: username password : password  completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid username/password supplied |
-
-
-
-### <a name="get_logout_user_with_completion_block"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.getLogoutUserWithCompletionBlock") getLogoutUserWithCompletionBlock
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Logs out current logged in user session
-
-
-```objc
-function getLogoutUserWithCompletionBlock:(CompletedGetLogoutUser) onCompleted()
-```
-
-
-
-#### Example Usage
-
-```objc
-
-    [self.user getLogoutUserWithCompletionBlock:  ^(BOOL success, HttpContext* context, NSError* error) { 
-       //Add code here
-    }];
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 0 | successful operation |
-
-
-
-### <a name="get_user_by_name_async_with_username"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.getUserByNameAsyncWithUsername") getUserByNameAsyncWithUsername
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Get user by user name
-
-
-```objc
-function getUserByNameAsyncWithUsername:(NSString*) username
-                completionBlock:(CompletedGetUserByName) onCompleted(username)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| username |  ``` Required ```  | The name that needs to be fetched. Use user1 for testing. |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    NSString* username = @"username";
-
-    [self.user getUserByNameAsyncWithUsername: username  completionBlock:^(BOOL success, HttpContext* context, User* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid username supplied |
-| 404 | User not found |
-
-
-
-### <a name="update_user_async_with_username"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.updateUserAsyncWithUsername") updateUserAsyncWithUsername
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Updated user
-
-
-```objc
-function updateUserAsyncWithUsername:(NSString*) username
-                body:(User*) body
-                completionBlock:(CompletedPutUpdateUser) onCompleted(username body : body)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| username |  ``` Required ```  | name that need to be updated |
-| body |  ``` Required ```  | Updated user object |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    NSString* username = @"username";
-    User* body = [[User alloc]init];
-
-    [self.user updateUserAsyncWithUsername: username body : body  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
-       //Add code here
-    }];
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid user supplied |
-| 404 | User not found |
-
-
-
-### <a name="delete_user_async_with_username"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.deleteUserAsyncWithUsername") deleteUserAsyncWithUsername
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Delete user
-
-
-```objc
-function deleteUserAsyncWithUsername:(NSString*) username
-                completionBlock:(CompletedDeleteUser) onCompleted(username)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| username |  ``` Required ```  | The name that needs to be deleted |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    NSString* username = @"username";
-
-    [self.user deleteUserAsyncWithUsername: username  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
-       //Add code here
-    }];
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid username supplied |
-| 404 | User not found |
-
 
 
 [Back to List of Controllers](#list_of_controllers)
