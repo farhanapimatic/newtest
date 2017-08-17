@@ -1,6 +1,6 @@
 # Getting started
 
-TODO: Add a description
+This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.
 
 ## How to Build
 
@@ -31,15 +31,15 @@ Now follow the steps mentioned below to build your SDK:
 
 3. In ```Select root directory```, provide path to the unzipped archive for the generated code. Once the path is set and the Project becomes visible under ```Projects``` click ```Finish```
 
-![Importing SDK into Eclipse - Step 3](https://apidocs.io/illustration/go?step=import2&workspaceFolder=API%20Title-GoLang&projectName=apititle_lib)
+![Importing SDK into Eclipse - Step 3](https://apidocs.io/illustration/go?step=import2&workspaceFolder=Swagger%20Petstore-GoLang&projectName=swaggerpetstore_lib)
 
 4. The Go library will be imported and its files will be visible in the Project Explorer
 
-![Importing SDK into Eclipse - Step 4](https://apidocs.io/illustration/go?step=import3&projectName=apititle_lib)
+![Importing SDK into Eclipse - Step 4](https://apidocs.io/illustration/go?step=import3&projectName=swaggerpetstore_lib)
 
 ## How to Use
 
-The following section explains how to use the ApititleLib library in a new project.
+The following section explains how to use the SwaggerpetstoreLib library in a new project.
 
 ### 1. Add a new Test Project
 
@@ -53,19 +53,19 @@ Name the Project as ```Test``` and click ```Finish```
 
 Create a new directory in the ```src``` directory of this project
 
-![Create a new Maven Project - Step 2](https://apidocs.io/illustration/go?step=createNewProject2&projectName=apititle_lib)
+![Create a new Maven Project - Step 2](https://apidocs.io/illustration/go?step=createNewProject2&projectName=swaggerpetstore_lib)
 
 Name it ```test.com```
 
-![Create a new Maven Project - Step 3](https://apidocs.io/illustration/go?step=createNewProject3&projectName=apititle_lib)
+![Create a new Maven Project - Step 3](https://apidocs.io/illustration/go?step=createNewProject3&projectName=swaggerpetstore_lib)
 
 Now create a new file inside ```src/test.com```
 
-![Create a new Maven Project - Step 4](https://apidocs.io/illustration/go?step=createNewProject4&projectName=apititle_lib)
+![Create a new Maven Project - Step 4](https://apidocs.io/illustration/go?step=createNewProject4&projectName=swaggerpetstore_lib)
 
 Name it ```testsdk.go```
 
-![Create a new Maven Project - Step 5](https://apidocs.io/illustration/go?step=createNewProject5&projectName=apititle_lib)
+![Create a new Maven Project - Step 5](https://apidocs.io/illustration/go?step=createNewProject5&projectName=swaggerpetstore_lib)
 
 In this Go file, you can start adding code to initialize the client library. Sample code to initialize the client library and using its methods is given in the subsequent sections.
 
@@ -75,7 +75,7 @@ You need to import your generated library in this project in order to make use o
 
 Right click on the project name and click on ```Properties```
 
-![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/go?step=testProject0&projectName=apititle_lib)
+![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/go?step=testProject0&projectName=swaggerpetstore_lib)
 
 Choose ```Go Compiler``` from the side menu. Check ```Use project specific settings``` and uncheck ```Use same value as the GOPATH environment variable.```. By default, the GOPATH value from the environment variables will be visible in ```Eclipse GOPATH```. Do not remove this as this points to the unirest dependency.
 
@@ -83,7 +83,7 @@ Choose ```Go Compiler``` from the side menu. Check ```Use project specific setti
 
 Append the library path to this GOPATH
 
-![Adding dependency to the client library - Step 3](https://apidocs.io/illustration/go?step=testProject2&workspaceFolder=API%20Title-GoLang)
+![Adding dependency to the client library - Step 3](https://apidocs.io/illustration/go?step=testProject2&workspaceFolder=Swagger%20Petstore-GoLang)
 
 Once the path is appended, click on ```OK```
 
@@ -91,13 +91,13 @@ Once the path is appended, click on ```OK```
 
 Right click on the project name and click on ```Build Project```
 
-![Build Project](https://apidocs.io/illustration/go?step=buildProject&projectName=apititle_lib)
+![Build Project](https://apidocs.io/illustration/go?step=buildProject&projectName=swaggerpetstore_lib)
 
 ### 4. Run the Test Project
 
 If the build is successful, right click on your Go file and click on ```Run As``` -> ```Go Application```
 
-![Run Project](https://apidocs.io/illustration/go?step=runProject&projectName=apititle_lib)
+![Run Project](https://apidocs.io/illustration/go?step=runProject&projectName=swaggerpetstore_lib)
 
 ## Initialization
 
@@ -106,7 +106,8 @@ In order to setup authentication of the API client, you need the following infor
 
 | Parameter | Description |
 |-----------|-------------|
-| oAuthAccessToken | OAuth 2.0 Access Token |
+| oAuthClientId | OAuth 2 Client ID |
+| oAuthRedirectUri | OAuth 2 Redirection endpoint or Callback Uri |
 
 
 To configure these for your generated code, open the file "Configuration.go" and edit it's contents.
@@ -116,64 +117,47 @@ To configure these for your generated code, open the file "Configuration.go" and
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [notes_pkg](#notes_pkg)
-* [users_pkg](#users_pkg)
-* [tagsandtagginglongtitle_pkg](#tagsandtagginglongtitle_pkg)
+* [pet_pkg](#pet_pkg)
+* [user_pkg](#user_pkg)
+* [store_pkg](#store_pkg)
 
-## <a name="notes_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".notes_pkg") notes_pkg
+## <a name="pet_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".pet_pkg") pet_pkg
 
 ### Get instance
 
-Factory for the ``` NOTES ``` interface can be accessed from the package notes_pkg.
+Factory for the ``` PET ``` interface can be accessed from the package pet_pkg.
 
 ```go
-notes := notes_pkg.NewNOTES()
+pet := pet_pkg.NewPET()
 ```
 
-### <a name="get_notes"></a>![Method: ](https://apidocs.io/img/method.png ".notes_pkg.GetNotes") GetNotes
+### <a name="delete_pet"></a>![Method: ](https://apidocs.io/img/method.png ".pet_pkg.DeletePet") DeletePet
 
-> Get a list of notes.
-
-
-```go
-func (me *NOTES_IMPL) GetNotes()([]*models_pkg.NoteData,error)
-```
-
-#### Example Usage
-
-```go
-
-var result []*models_pkg.NoteData
-result,_ = notes.GetNotes()
-
-```
-
-
-### <a name="create_new_note"></a>![Method: ](https://apidocs.io/img/method.png ".notes_pkg.CreateNewNote") CreateNewNote
-
-> Create a new note using a title and an optional content body.
+> Deletes a pet
 
 
 ```go
-func (me *NOTES_IMPL) CreateNewNote(body *models_pkg.CreateNewNoteRequest)(,error)
+func (me *PET_IMPL) DeletePet(
+            petId int64,
+            apiKey *string)(,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
+| petId |  ``` Required ```  | Pet id to delete |
+| apiKey |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
 
 ```go
-bodyValue := []byte("{    \"title\": \"My new note\",    \"body\": \"This is the body\"}")
-var body *models_pkg.CreateNewNoteRequest
-json.Unmarshal(bodyValue,&body)
+petId,_ := strconv.ParseInt("38", 10, 8)
+apiKey := "api_key"
 
 var result 
-result,_ = notes.CreateNewNote(body)
+result,_ = pet.DeletePet(petId, apiKey)
 
 ```
 
@@ -181,239 +165,701 @@ result,_ = notes.CreateNewNote(body)
  
 | Error Code | Error Description |
 |------------|-------------------|
-| 400 | Unexpected error in API call. See HTTP response body for details. |
+| 400 | Invalid ID supplied |
+| 404 | Pet not found |
 
 
 
-### <a name="get_note"></a>![Method: ](https://apidocs.io/img/method.png ".notes_pkg.GetNote") GetNote
+### <a name="update_pet_with_form"></a>![Method: ](https://apidocs.io/img/method.png ".pet_pkg.UpdatePetWithForm") UpdatePetWithForm
 
-> Get a single note.
-
-
-```go
-func (me *NOTES_IMPL) GetNote(
-            id string,
-            body bool)(*models_pkg.NoteData,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | The note ID |
-| body |  ``` Required ```  | Set to `false` to exclude note body content. |
-
-
-#### Example Usage
-
-```go
-id := "68a5sdf67"
-body := false
-
-var result *models_pkg.NoteData
-result,_ = notes.GetNote(id, body)
-
-```
-
-#### Errors
- 
-| Error Code | Error Description |
-|------------|-------------------|
-| 404 | Unexpected error in API call. See HTTP response body for details. |
-
-
-
-### <a name="update_a_note"></a>![Method: ](https://apidocs.io/img/method.png ".notes_pkg.UpdateANote") UpdateANote
-
-> Update a single note by setting the title and/or body.
-> ::: warning
-> #### <i class="fa fa-warning"></i> Caution
-> If the value for `title` or `body` is `null` or `undefined`, then the corresponding value is not modified on the server. However, if you send an empty string instead then it will **permanently overwrite** the original value.
-> :::
+> Updates a pet in the store with form data
 
 
 ```go
-func (me *NOTES_IMPL) UpdateANote(
-            id string,
-            body *string)(*models_pkg.NoteData,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | The note ID |
-| body |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-id := "68a5sdf67"
-body := "body"
-
-var result *models_pkg.NoteData
-result,_ = notes.UpdateANote(id, body)
-
-```
-
-#### Errors
- 
-| Error Code | Error Description |
-|------------|-------------------|
-| 404 | Unexpected error in API call. See HTTP response body for details. |
-
-
-
-### <a name="delete_a_note"></a>![Method: ](https://apidocs.io/img/method.png ".notes_pkg.DeleteANote") DeleteANote
-
-> Delete a single note
-
-
-```go
-func (me *NOTES_IMPL) DeleteANote(
-            id string,
-            body *string)(,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | The note ID |
-| body |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-id := "68a5sdf67"
-body := "body"
-
-var result 
-result,_ = notes.DeleteANote(id, body)
-
-```
-
-#### Errors
- 
-| Error Code | Error Description |
-|------------|-------------------|
-| 404 | Unexpected error in API call. See HTTP response body for details. |
-
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="users_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".users_pkg") users_pkg
-
-### Get instance
-
-Factory for the ``` USERS ``` interface can be accessed from the package users_pkg.
-
-```go
-users := users_pkg.NewUSERS()
-```
-
-### <a name="get_users"></a>![Method: ](https://apidocs.io/img/method.png ".users_pkg.GetUsers") GetUsers
-
-> Get a list of users. Example:
-> ```no-highlight
-> https://api.mywebsite.com/users?sort=joined&limit=5
-> ```
-
-
-```go
-func (me *USERS_IMPL) GetUsers(
+func (me *PET_IMPL) UpdatePetWithForm(
+            petId int64,
             name *string,
-            joinedBefore *string,
-            joinedAfter *string,
-            sort models_pkg.SortEnum,
-            limit *int64)([]*models_pkg.GetUsersResponse,error)
+            status *string)(,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| name |  ``` Optional ```  | Search for a user by name |
-| joinedBefore |  ``` Optional ```  | Search by join date |
-| joinedAfter |  ``` Optional ```  | Search by join date |
-| sort |  ``` Optional ```  ``` DefaultValue ```  | Which field to sort by |
-| limit |  ``` Optional ```  | The maximum number of users to return, up to `50` |
+| petId |  ``` Required ```  | ID of pet that needs to be updated |
+| name |  ``` Optional ```  | Updated name of the pet |
+| status |  ``` Optional ```  | Updated status of the pet |
 
 
 #### Example Usage
 
 ```go
-name := "alice"
-joinedBefore := "2011-01-01"
-joinedAfter := "2011-01-01"
-sort := models_pkg.sort_JOINED
-limit,_ := strconv.ParseInt("25", 10, 8)
+petId,_ := strconv.ParseInt("38", 10, 8)
+name := "name"
+status := "status"
 
-var result []*models_pkg.GetUsersResponse
-result,_ = users.GetUsers(name, joinedBefore, joinedAfter, sort, limit)
+var result 
+result,_ = pet.UpdatePetWithForm(petId, name, status)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 405 | Invalid input |
+
+
+
+### <a name="get_pet_by_id"></a>![Method: ](https://apidocs.io/img/method.png ".pet_pkg.GetPetById") GetPetById
+
+> Find pet by ID
+
+
+```go
+func (me *PET_IMPL) GetPetById(petId int64)(*models_pkg.Pet,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| petId |  ``` Required ```  | ID of pet to return |
+
+
+#### Example Usage
+
+```go
+petId,_ := strconv.ParseInt("38", 10, 8)
+
+var result *models_pkg.Pet
+result,_ = pet.GetPetById(petId)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 400 | Invalid ID supplied |
+| 404 | Pet not found |
+
+
+
+### <a name="find_pets_by_status"></a>![Method: ](https://apidocs.io/img/method.png ".pet_pkg.FindPetsByStatus") FindPetsByStatus
+
+> Finds Pets by status
+
+
+```go
+func (me *PET_IMPL) FindPetsByStatus(status []models_pkg.Status7Enum)([]*models_pkg.Pet,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| status |  ``` Required ```  ``` Collection ```  | Status values that need to be considered for filter |
+
+
+#### Example Usage
+
+```go
+status := []models_pkg.Status7Enum{ models_pkg.Status7_AVAILABLE }
+
+var result []*models_pkg.Pet
+result,_ = pet.FindPetsByStatus(status)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 400 | Invalid status value |
+
+
+
+### <a name="update_pet"></a>![Method: ](https://apidocs.io/img/method.png ".pet_pkg.UpdatePet") UpdatePet
+
+> Update an existing pet
+
+
+```go
+func (me *PET_IMPL) UpdatePet(body *models_pkg.Pet)(,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| body |  ``` Required ```  | Pet object that needs to be added to the store |
+
+
+#### Example Usage
+
+```go
+var body *models_pkg.Pet
+
+var result 
+result,_ = pet.UpdatePet(body)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 400 | Invalid ID supplied |
+| 404 | Pet not found |
+| 405 | Validation exception |
+
+
+
+### <a name="find_pets_by_tags"></a>![Method: ](https://apidocs.io/img/method.png ".pet_pkg.FindPetsByTags") FindPetsByTags
+
+> Finds Pets by tags
+
+
+```go
+func (me *PET_IMPL) FindPetsByTags(tags []string)([]*models_pkg.Pet,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| tags |  ``` Required ```  ``` Collection ```  | Tags to filter by |
+
+
+#### Example Usage
+
+```go
+tags := []string{"tags"}
+
+var result []*models_pkg.Pet
+result,_ = pet.FindPetsByTags(tags)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 400 | Invalid tag value |
+
+
+
+### <a name="add_pet"></a>![Method: ](https://apidocs.io/img/method.png ".pet_pkg.AddPet") AddPet
+
+> Add a new pet to the store
+
+
+```go
+func (me *PET_IMPL) AddPet(body *models_pkg.Pet)(,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| body |  ``` Required ```  | Pet object that needs to be added to the store |
+
+
+#### Example Usage
+
+```go
+var body *models_pkg.Pet
+
+var result 
+result,_ = pet.AddPet(body)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 405 | Invalid input |
+
+
+
+### <a name="upload_file"></a>![Method: ](https://apidocs.io/img/method.png ".pet_pkg.UploadFile") UploadFile
+
+> uploads an image
+
+
+```go
+func (me *PET_IMPL) UploadFile(
+            petId int64,
+            additionalMetadata *string,
+            file []byte)(*models_pkg.ApiResponse,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| petId |  ``` Required ```  | ID of pet to update |
+| additionalMetadata |  ``` Optional ```  | Additional data to pass to server |
+| file |  ``` Optional ```  | file to upload |
+
+
+#### Example Usage
+
+```go
+petId,_ := strconv.ParseInt("38", 10, 8)
+additionalMetadata := "additionalMetadata"
+file :=  []byte("")
+
+var result *models_pkg.ApiResponse
+result,_ = pet.UploadFile(petId, additionalMetadata, file)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="tagsandtagginglongtitle_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".tagsandtagginglongtitle_pkg") tagsandtagginglongtitle_pkg
+## <a name="user_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".user_pkg") user_pkg
 
 ### Get instance
 
-Factory for the ``` TAGSANDTAGGINGLONGTITLE ``` interface can be accessed from the package tagsandtagginglongtitle_pkg.
+Factory for the ``` USER ``` interface can be accessed from the package user_pkg.
 
 ```go
-tagsAndTaggingLongTitle := tagsandtagginglongtitle_pkg.NewTAGSANDTAGGINGLONGTITLE()
+user := user_pkg.NewUSER()
 ```
 
-### <a name="get_tags"></a>![Method: ](https://apidocs.io/img/method.png ".tagsandtagginglongtitle_pkg.GetTags") GetTags
+### <a name="get_logout_user"></a>![Method: ](https://apidocs.io/img/method.png ".user_pkg.GetLogoutUser") GetLogoutUser
 
-> Get a list of bars
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Logs out current logged in user session
 
 
 ```go
-func (me *TAGSANDTAGGINGLONGTITLE_IMPL) GetTags()([]string,error)
+func (me *USER_IMPL) GetLogoutUser()(,error)
 ```
 
 #### Example Usage
 
 ```go
 
-var result []string
-result,_ = tagsAndTaggingLongTitle.GetTags()
+var result 
+result,_ = user.GetLogoutUser()
 
 ```
 
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 0 | successful operation |
 
-### <a name="get_get_one_tag"></a>![Method: ](https://apidocs.io/img/method.png ".tagsandtagginglongtitle_pkg.GetGetOneTag") GetGetOneTag
 
-> Get a single tag
+
+### <a name="create_users_with_list_input"></a>![Method: ](https://apidocs.io/img/method.png ".user_pkg.CreateUsersWithListInput") CreateUsersWithListInput
+
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Creates list of users with given input array
 
 
 ```go
-func (me *TAGSANDTAGGINGLONGTITLE_IMPL) GetGetOneTag(id string)(interface{},error)
+func (me *USER_IMPL) CreateUsersWithListInput(body []*models_pkg.User)(,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| id |  ``` Required ```  | Unique tag identifier |
+| body |  ``` Required ```  ``` Collection ```  | List of user object |
 
 
 #### Example Usage
 
 ```go
-id := "id"
+var body []*models_pkg.User
 
-var result interface{}
-result,_ = tagsAndTaggingLongTitle.GetGetOneTag(id)
+var result 
+result,_ = user.CreateUsersWithListInput(body)
 
 ```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 0 | successful operation |
+
+
+
+### <a name="create_users_with_array_input"></a>![Method: ](https://apidocs.io/img/method.png ".user_pkg.CreateUsersWithArrayInput") CreateUsersWithArrayInput
+
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Creates list of users with given input array
+
+
+```go
+func (me *USER_IMPL) CreateUsersWithArrayInput(body []*models_pkg.User)(,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| body |  ``` Required ```  ``` Collection ```  | List of user object |
+
+
+#### Example Usage
+
+```go
+var body []*models_pkg.User
+
+var result 
+result,_ = user.CreateUsersWithArrayInput(body)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 0 | successful operation |
+
+
+
+### <a name="create_user"></a>![Method: ](https://apidocs.io/img/method.png ".user_pkg.CreateUser") CreateUser
+
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Create user
+
+
+```go
+func (me *USER_IMPL) CreateUser(body *models_pkg.User)(,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| body |  ``` Required ```  | Created user object |
+
+
+#### Example Usage
+
+```go
+var body *models_pkg.User
+
+var result 
+result,_ = user.CreateUser(body)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 0 | successful operation |
+
+
+
+### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".user_pkg.DeleteUser") DeleteUser
+
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Delete user
+
+
+```go
+func (me *USER_IMPL) DeleteUser(username string)(,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| username |  ``` Required ```  | The name that needs to be deleted |
+
+
+#### Example Usage
+
+```go
+username := "username"
+
+var result 
+result,_ = user.DeleteUser(username)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 400 | Invalid username supplied |
+| 404 | User not found |
+
+
+
+### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".user_pkg.UpdateUser") UpdateUser
+
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Updated user
+
+
+```go
+func (me *USER_IMPL) UpdateUser(
+            username string,
+            body *models_pkg.User)(,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| username |  ``` Required ```  | name that need to be updated |
+| body |  ``` Required ```  | Updated user object |
+
+
+#### Example Usage
+
+```go
+username := "username"
+var body *models_pkg.User
+
+var result 
+result,_ = user.UpdateUser(username, body)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 400 | Invalid user supplied |
+| 404 | User not found |
+
+
+
+### <a name="get_user_by_name"></a>![Method: ](https://apidocs.io/img/method.png ".user_pkg.GetUserByName") GetUserByName
+
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Get user by user name
+
+
+```go
+func (me *USER_IMPL) GetUserByName(username string)(*models_pkg.User,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| username |  ``` Required ```  | The name that needs to be fetched. Use user1 for testing. |
+
+
+#### Example Usage
+
+```go
+username := "username"
+
+var result *models_pkg.User
+result,_ = user.GetUserByName(username)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 400 | Invalid username supplied |
+| 404 | User not found |
+
+
+
+### <a name="get_login_user"></a>![Method: ](https://apidocs.io/img/method.png ".user_pkg.GetLoginUser") GetLoginUser
+
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Logs user into the system
+
+
+```go
+func (me *USER_IMPL) GetLoginUser(
+            username string,
+            password string)(*string,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| username |  ``` Required ```  | The user name for login |
+| password |  ``` Required ```  | The password for login in clear text |
+
+
+#### Example Usage
+
+```go
+username := "username"
+password := "password"
+
+var result *string
+result,_ = user.GetLoginUser(username, password)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 400 | Invalid username/password supplied |
+
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="store_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".store_pkg") store_pkg
+
+### Get instance
+
+Factory for the ``` STORE ``` interface can be accessed from the package store_pkg.
+
+```go
+store := store_pkg.NewSTORE()
+```
+
+### <a name="create_place_order"></a>![Method: ](https://apidocs.io/img/method.png ".store_pkg.CreatePlaceOrder") CreatePlaceOrder
+
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Place an order for a pet
+
+
+```go
+func (me *STORE_IMPL) CreatePlaceOrder(body *models_pkg.Order)(*models_pkg.Order,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| body |  ``` Required ```  | order placed for purchasing the pet |
+
+
+#### Example Usage
+
+```go
+var body *models_pkg.Order
+
+var result *models_pkg.Order
+result,_ = store.CreatePlaceOrder(body)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 400 | Invalid Order |
+
+
+
+### <a name="get_inventory"></a>![Method: ](https://apidocs.io/img/method.png ".store_pkg.GetInventory") GetInventory
+
+> Returns pet inventories by status
+
+
+```go
+func (me *STORE_IMPL) GetInventory()(*int64,error)
+```
+
+#### Example Usage
+
+```go
+
+var result *int64
+result,_ = store.GetInventory()
+
+```
+
+
+### <a name="delete_order"></a>![Method: ](https://apidocs.io/img/method.png ".store_pkg.DeleteOrder") DeleteOrder
+
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Delete purchase order by ID
+
+
+```go
+func (me *STORE_IMPL) DeleteOrder(orderId int64)(,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| orderId |  ``` Required ```  | ID of the order that needs to be deleted |
+
+
+#### Example Usage
+
+```go
+orderId,_ := strconv.ParseInt("38", 10, 8)
+
+var result 
+result,_ = store.DeleteOrder(orderId)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 400 | Invalid ID supplied |
+| 404 | Order not found |
+
+
+
+### <a name="get_order_by_id"></a>![Method: ](https://apidocs.io/img/method.png ".store_pkg.GetOrderById") GetOrderById
+
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Find purchase order by ID
+
+
+```go
+func (me *STORE_IMPL) GetOrderById(orderId int64)(*models_pkg.Order,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| orderId |  ``` Required ```  | ID of pet that needs to be fetched |
+
+
+#### Example Usage
+
+```go
+orderId,_ := strconv.ParseInt("38", 10, 8)
+
+var result *models_pkg.Order
+result,_ = store.GetOrderById(orderId)
+
+```
+
+#### Errors
+ 
+| Error Code | Error Description |
+|------------|-------------------|
+| 400 | Invalid ID supplied |
+| 404 | Order not found |
+
 
 
 [Back to List of Controllers](#list_of_controllers)
