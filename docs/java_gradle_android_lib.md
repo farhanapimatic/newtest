@@ -1,5 +1,7 @@
 # Getting started
 
+Simple calculator API hosted on APIMATIC
+
 ## How to Build
 
 The generated code uses a few Gradle dependencies e.g., Jackson, Volley,
@@ -9,67 +11,67 @@ you will need internet access for a successful build.
 
 * In order to open the client library in Android Studio click on ``` Open an Existing Android Project ```.
 
-![Importing SDK into Android Studio - Step 1](https://apidocs.io/illustration/android?step=import1&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Importing SDK into Android Studio - Step 1](https://apidocs.io/illustration/android?step=import1&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
-* Browse to locate the folder containing the source code. Select the location of the CalculatorService gradle project and click ``` Ok ```.
+* Browse to locate the folder containing the source code. Select the location of the APIMATICCalculator gradle project and click ``` Ok ```.
 
-![Importing SDK into Android Studio - Step 2](https://apidocs.io/illustration/android?step=import2&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Importing SDK into Android Studio - Step 2](https://apidocs.io/illustration/android?step=import2&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 * Upon successful import, the project can be built by clicking on ``` Build > Make Project ``` or  pressing ``` Ctrl + F9 ```.
 
-![Importing SDK into Android Studio - Step 3](https://apidocs.io/illustration/android?step=import3&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Importing SDK into Android Studio - Step 3](https://apidocs.io/illustration/android?step=import3&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 ## How to Use
 
-The following section explains how to use the CalculatorService library in a new project.
+The following section explains how to use the APIMATICCalculator library in a new project.
 
 ### 1. Starting a new project 
 
 For starting a new project, click on ``` Create New Android Studio Project ```.
 
-![Add a new project in Android Studio - Step 1](https://apidocs.io/illustration/android?step=createNewProject0&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Add a new project in Android Studio - Step 1](https://apidocs.io/illustration/android?step=createNewProject0&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 Here, configure the new project by adding the name, domain and location of the sample application followed by clicking ``` Next ```.
 
-![Create a new Android Studio Project - Step 2](https://apidocs.io/illustration/android?step=createNewProject1&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Create a new Android Studio Project - Step 2](https://apidocs.io/illustration/android?step=createNewProject1&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 Following this, select the ``` Phone and Tablet ```` option as shown in the illustration below and click ``` Next ```. 
 
-![Create a new Android Studio Project - Step 3](https://apidocs.io/illustration/android?step=createNewProject2&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Create a new Android Studio Project - Step 3](https://apidocs.io/illustration/android?step=createNewProject2&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 In the following step, choose ``` Empty Activity ``` as the activity type and click ``` Next ```.
 
-![Create a new Android Studio Project - Step 4](https://apidocs.io/illustration/android?step=createNewProject3&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Create a new Android Studio Project - Step 4](https://apidocs.io/illustration/android?step=createNewProject3&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 In this step, provide an ``` Activity Name ``` and ``` Layout Name ``` and click ``` Finish ```.  This would take you to the newly created project.
 
-![Create a new Android Studio Project - Step 4](https://apidocs.io/illustration/android?step=createNewProject4&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Create a new Android Studio Project - Step 4](https://apidocs.io/illustration/android?step=createNewProject4&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 ### 2. Add reference of the library project
 
 In order to add a dependency to this sample application, click on the android button shown in the project explorer on the left side as shown in the picture. Click on ``` Project ``` in the drop down that emerges.  
 
-![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/android?step=testProject0&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/android?step=testProject0&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 Right click the sample application in the project explorer and click on ``` New > Module ```  as shown in the picture.
 
-![Adding dependency to the client library - Step 2](https://apidocs.io/illustration/android?step=testProject1&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Adding dependency to the client library - Step 2](https://apidocs.io/illustration/android?step=testProject1&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 Choose ``` Import Gradle Project ``` and click ``` Next ```.
 
-![Adding dependency to the client library - Step 3](https://apidocs.io/illustration/android?step=testProject2&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Adding dependency to the client library - Step 3](https://apidocs.io/illustration/android?step=testProject2&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 Click on ``` Finish ``` which would take you back to the sample application with the refernced SDK. 
 
-![Adding dependency to the client library - Step 4](https://apidocs.io/illustration/android?step=testProject3&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Adding dependency to the client library - Step 4](https://apidocs.io/illustration/android?step=testProject3&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
-In the following step naigate to the ``` SampleApplication >  app > build.gradle ``` file and add the following line ```compile project(path: ':CalculatorService')``` to the dependencies section as shown in the illustration below.
+In the following step naigate to the ``` SampleApplication >  app > build.gradle ``` file and add the following line ```compile project(path: ':APIMATICCalculator')``` to the dependencies section as shown in the illustration below.
 
-![Adding dependency to the client library - Step 5](https://apidocs.io/illustration/android?step=testProject4&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Adding dependency to the client library - Step 5](https://apidocs.io/illustration/android?step=testProject4&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 Finally, press ``` Sync Now ``` in the warning visible as shown in the picture below.
 
-![Adding dependency to the client library - Step 6](https://apidocs.io/illustration/android?step=testProject5&workspaceFolder=CalculatorService&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Adding dependency to the client library - Step 6](https://apidocs.io/illustration/android?step=testProject5&workspaceFolder=APIMATIC%20Calculator&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 ### 3. Write sample code
 
@@ -83,19 +85,28 @@ JUnit is used as the testing framework and test runner.
 
 In Android Studio, for running the tests do the following:
 
-1. Right click on *SampleApplication > CalculatorServiceLib > androidTest > java)* from the project explorer.
+1. Right click on *SampleApplication > APIMATICCalculatorLib > androidTest > java)* from the project explorer.
 2. Select "Run All Tests" or use "Ctrl + Shift + F10" to run the Tests.
 
 ## Initialization
 
-### 
+### Authentication
+In order to setup authentication and initialization of the API client, you need the following information.
+
+| Parameter | Description |
+|-----------|-------------|
+| oAuthAccessToken | OAuth 2.0 Access Token |
+
+
 
 API client can be initialized as following. The `appContext` being passed is the Android application [`Context`](https://developer.android.com/reference/android/content/Context.html).
 
 ```java
+// Configuration parameters and credentials
+String oAuthAccessToken = "oAuthAccessToken"; // OAuth 2.0 Access Token
 
-org.example.Configuration.initialize(appContext);
-CalculatorServiceClient client = new CalculatorServiceClient();
+io.apimatic.examples.Configuration.initialize(appContext);
+APIMATICCalculatorClient client = new APIMATICCalculatorClient(oAuthAccessToken);
 ```
 
 
@@ -103,29 +114,28 @@ CalculatorServiceClient client = new CalculatorServiceClient();
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [DefaultBindingICalculatorController](#default_binding_i_calculator_controller)
+* [APIController](#api_controller)
+* [SimpleCalculatorController](#simple_calculator_controller)
 
-## <a name="default_binding_i_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png "org.example.controllers.DefaultBindingICalculatorController") DefaultBindingICalculatorController
+## <a name="api_controller"></a>![Class: ](https://apidocs.io/img/class.png "io.apimatic.examples.controllers.APIController") APIController
 
 ### Get singleton instance
 
-The singleton instance of the ``` DefaultBindingICalculatorController ``` class can be accessed from the API Client.
+The singleton instance of the ``` APIController ``` class can be accessed from the API Client.
 
 ```java
-DefaultBindingICalculatorController defaultBindingICalculator = client.getDefaultBindingICalculator();
+APIController client = client.getClient();
 ```
 
-### <a name="add_async"></a>![Method: ](https://apidocs.io/img/method.png "org.example.controllers.DefaultBindingICalculatorController.addAsync") addAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="new_async"></a>![Method: ](https://apidocs.io/img/method.png "io.apimatic.examples.controllers.APIController.newAsync") newAsync
 
 > TODO: Add a method description
 
 
 ```java
-void addAsync(
-        final ICalculatorAddInputMessage body,
-        final APICallBack<ICalculatorAddOutputMessage> callBack)
+void newAsync(
+        final NewInput input,
+        final APICallBack<DynamicResponse> callBack)
 ```
 
 #### Parameters
@@ -133,22 +143,39 @@ void addAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | body |  ``` Required ```  | TODO: Add a parameter description |
+| cacheControl |  ``` Required ```  | TODO: Add a parameter description |
+| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| postmanToken |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
 
 ```java
 try {
-    ICalculatorAddInputMessage body = new ICalculatorAddInputMessage();
+NewInput collect = new NewInput();
+
+    NewRequest body = new NewRequest();
+collect.setBody(body);
+
+    String cacheControl = "cache-control";
+collect.setCacheControl(cacheControl);
+
+    String contentType = "content-type";
+collect.setContentType(contentType);
+
+    String postmanToken = "postman-token";
+collect.setPostmanToken(postmanToken);
+
     // Invoking the API call with sample inputs
-    defaultBindingICalculator.addAsync(body, new APICallBack<ICalculatorAddOutputMessage>() {
-        public void onSuccess(HttpContext context, ICalculatorAddOutputMessage response) {
+    client.newAsync(collect, new APICallBack<DynamicResponse>() {
+        public void onSuccess(HttpContext context, DynamicResponse response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    });
+    }
+);
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -156,44 +183,63 @@ try {
 ```
 
 
-### <a name="create_subtract_async"></a>![Method: ](https://apidocs.io/img/method.png "org.example.controllers.DefaultBindingICalculatorController.createSubtractAsync") createSubtractAsync
+[Back to List of Controllers](#list_of_controllers)
 
-> *Tags:*  ``` Skips Authentication ``` 
+## <a name="simple_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png "io.apimatic.examples.controllers.SimpleCalculatorController") SimpleCalculatorController
 
-> TODO: Add a method description
+### Get singleton instance
+
+The singleton instance of the ``` SimpleCalculatorController ``` class can be accessed from the API Client.
+
+```java
+SimpleCalculatorController simpleCalculator = client.getSimpleCalculator();
+```
+
+### <a name="get_calculate_async"></a>![Method: ](https://apidocs.io/img/method.png "io.apimatic.examples.controllers.SimpleCalculatorController.getCalculateAsync") getCalculateAsync
+
+> Calculates the expression using the specified operation.
 
 
 ```java
-void createSubtractAsync(
-        final ICalculatorSubtractInputMessage body,
-        final APICallBack<ICalculatorSubtractOutputMessage> callBack)
+void getCalculateAsync(
+        final GetCalculateInput input,
+        final APICallBack<Double> callBack)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
+| operation |  ``` Required ```  | The operator to apply on the variables |
+| x |  ``` Required ```  | The LHS value |
+| y |  ``` Required ```  | The RHS value |
 
 
 #### Example Usage
 
 ```java
-try {
-    ICalculatorSubtractInputMessage body = new ICalculatorSubtractInputMessage();
-    // Invoking the API call with sample inputs
-    defaultBindingICalculator.createSubtractAsync(body, new APICallBack<ICalculatorSubtractOutputMessage>() {
-        public void onSuccess(HttpContext context, ICalculatorSubtractOutputMessage response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+GetCalculateInput collect = new GetCalculateInput();
+
+OperationTypeEnum operation = OperationTypeEnum.fromString("MULTIPLY");
+collect.setOperation(operation);
+
+double x = 4;
+collect.setX(x);
+
+double y = 5;
+collect.setY(y);
+
+// Invoking the API call with sample inputs
+simpleCalculator.getCalculateAsync(collect, new APICallBack<Double>() {
+    public void onSuccess(HttpContext context, Double response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
 }
+);
+
 ```
 
 

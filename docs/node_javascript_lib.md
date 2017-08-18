@@ -1,5 +1,7 @@
 # Getting started
 
+Simple calculator API hosted on APIMATIC
+
 ## How to Build
 
 The generated SDK relies on [Node Package Manager](https://www.npmjs.com/) (NPM) being available to resolve dependencies. If you don't already have NPM installed, please go ahead and follow instructions to install NPM from [here](https://nodejs.org/en/download/).
@@ -11,7 +13,7 @@ To check if node and npm have been successfully installed, write the following c
 * `node --version`
 * `npm -version`
 
-![Version Check](https://apidocs.io/illustration/nodejs?step=versionCheck&workspaceFolder=CalculatorService-Node)
+![Version Check](https://apidocs.io/illustration/nodejs?step=versionCheck&workspaceFolder=APIMATIC%20Calculator-Node)
 
 Now use npm to resolve all dependencies by running the following command in the root directory (of the SDK folder):
 
@@ -19,13 +21,13 @@ Now use npm to resolve all dependencies by running the following command in the 
 npm install
 ```
 
-![Resolve Dependencies](https://apidocs.io/illustration/nodejs?step=resolveDependency1&workspaceFolder=CalculatorService-Node)
+![Resolve Dependencies](https://apidocs.io/illustration/nodejs?step=resolveDependency1&workspaceFolder=APIMATIC%20Calculator-Node)
 
 ![Resolve Dependencies](https://apidocs.io/illustration/nodejs?step=resolveDependency2)
 
 This will install all dependencies in the `node_modules` folder.
 
-Once dependencies are resolved, you will need to move the folder `CalculatorServiceLib ` in to your `node_modules` folder.
+Once dependencies are resolved, you will need to move the folder `APIMATICCalculatorLib ` in to your `node_modules` folder.
 
 ## How to Use
 
@@ -40,7 +42,7 @@ Click on `File` and select `Open Folder`.
 
 Select the folder of your SDK and click on `Select Folder` to open it up in Sublime Text. The folder will become visible in the bar on the left.
 
-![Open Project](https://apidocs.io/illustration/nodejs?step=openProject&workspaceFolder=CalculatorService-Node)
+![Open Project](https://apidocs.io/illustration/nodejs?step=openProject&workspaceFolder=APIMATIC%20Calculator-Node)
 
 ### 2. Creating a Test File
 
@@ -52,9 +54,9 @@ var lib = require('lib');
 
 Save changes.
 
-![Create new file](https://apidocs.io/illustration/nodejs?step=createNewFile&workspaceFolder=CalculatorService-Node)
+![Create new file](https://apidocs.io/illustration/nodejs?step=createNewFile&workspaceFolder=APIMATIC%20Calculator-Node)
 
-![Save new file](https://apidocs.io/illustration/nodejs?step=saveNewFile&workspaceFolder=CalculatorService-Node)
+![Save new file](https://apidocs.io/illustration/nodejs?step=saveNewFile&workspaceFolder=APIMATIC%20Calculator-Node)
 
 ### 3. Running The Test File
 
@@ -64,7 +66,7 @@ To run the `index.js` file, open up the command prompt and navigate to the Path 
 node index.js
 ```
 
-![Run file](https://apidocs.io/illustration/nodejs?step=runProject&workspaceFolder=CalculatorService-Node)
+![Run file](https://apidocs.io/illustration/nodejs?step=runProject&workspaceFolder=APIMATIC%20Calculator-Node)
 
 
 ## How to Test
@@ -85,21 +87,30 @@ Tests can be run in a number of ways:
 ### Method 3 (Run specific controller's tests)
 
 1. Navigate to the `../test/Controllers/` directory from command prompt.
-2. Type `mocha  CalculatorServiceController`  to run all the tests in that controller file.
+2. Type `mocha  APIMATIC CalculatorController`  to run all the tests in that controller file.
 
 > To increase mocha's default timeout, you can change the `TEST_TIMEOUT` parameter's value in `TestBootstrap.js`.
 
-![Run Tests](https://apidocs.io/illustration/nodejs?step=runTests&controllerName=CalculatorServiceController)
+![Run Tests](https://apidocs.io/illustration/nodejs?step=runTests&controllerName=APIMATIC%20CalculatorController)
 
 ## Initialization
 
-### 
+### Authentication
+In order to setup authentication in the API client, you need the following information.
+
+| Parameter | Description |
+|-----------|-------------|
+| oAuthAccessToken | OAuth 2.0 Access Token |
+
+
 
 API client can be initialized as following:
 
 ```JavaScript
 const lib = require('lib');
 
+// Configuration parameters and credentials
+lib.Configuration.oAuthAccessToken = "oAuthAccessToken"; // OAuth 2.0 Access Token
 
 ```
 
@@ -109,33 +120,35 @@ const lib = require('lib');
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [DefaultBindingICalculatorController](#default_binding_i_calculator_controller)
+* [APIController](#api_controller)
+* [SimpleCalculatorController](#simple_calculator_controller)
 
-## <a name="default_binding_i_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DefaultBindingICalculatorController") DefaultBindingICalculatorController
+## <a name="api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".APIController") APIController
 
 ### Get singleton instance
 
-The singleton instance of the ``` DefaultBindingICalculatorController ``` class can be accessed from the API Client.
+The singleton instance of the ``` APIController ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.DefaultBindingICalculatorController;
+var controller = lib.APIController;
 ```
 
-### <a name="add"></a>![Method: ](https://apidocs.io/img/method.png ".DefaultBindingICalculatorController.add") add
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="new"></a>![Method: ](https://apidocs.io/img/method.png ".APIController.new") new
 
 > TODO: Add a method description
 
 
 ```javascript
-function add(body, callback)
+function new(input, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | body |  ``` Required ```  | TODO: Add a parameter description |
+| cacheControl |  ``` Required ```  | TODO: Add a parameter description |
+| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| postmanToken |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -143,9 +156,13 @@ function add(body, callback)
 
 ```javascript
 
-    var body = new ICalculatorAddInputMessage({"key":"value"});
+    var input = [];
+        input['body'] = new NewRequest({"key":"value"});
+        input['cacheControl'] = 'cache-control';
+        input['contentType'] = 'content-type';
+        input['postmanToken'] = 'postman-token';
 
-    controller.add(body, function(error, response, context) {
+    controller.new(input, function(error, response, context) {
 
     
     });
@@ -153,21 +170,33 @@ function add(body, callback)
 
 
 
-### <a name="create_subtract"></a>![Method: ](https://apidocs.io/img/method.png ".DefaultBindingICalculatorController.createSubtract") createSubtract
+[Back to List of Controllers](#list_of_controllers)
 
-> *Tags:*  ``` Skips Authentication ``` 
+## <a name="simple_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SimpleCalculatorController") SimpleCalculatorController
 
-> TODO: Add a method description
+### Get singleton instance
+
+The singleton instance of the ``` SimpleCalculatorController ``` class can be accessed from the API Client.
+
+```javascript
+var controller = lib.SimpleCalculatorController;
+```
+
+### <a name="get_calculate"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculatorController.getCalculate") getCalculate
+
+> Calculates the expression using the specified operation.
 
 
 ```javascript
-function createSubtract(body, callback)
+function getCalculate(input, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
+| operation |  ``` Required ```  | The operator to apply on the variables |
+| x |  ``` Required ```  | The LHS value |
+| y |  ``` Required ```  | The RHS value |
 
 
 
@@ -175,9 +204,12 @@ function createSubtract(body, callback)
 
 ```javascript
 
-    var body = new ICalculatorSubtractInputMessage({"key":"value"});
+    var input = [];
+        input['operation'] = new OperationTypeEnum(MULTIPLY);
+        input['x'] = 4;
+        input['y'] = 5;
 
-    controller.createSubtract(body, function(error, response, context) {
+    controller.getCalculate(input, function(error, response, context) {
 
     
     });

@@ -1,5 +1,7 @@
 # Getting started
 
+Simple calculator API hosted on APIMATIC
+
 ## How to Build
 
 
@@ -13,12 +15,12 @@ This should display the version of the PIP Dependency Manager installed if your 
 * Using command line, navigate to the directory containing the generated files (including ```requirements.txt```) for the SDK.
 * Run the command ```pip install -r requirements.txt```. This should install all the required dependencies.
 
-![Building SDK - Step 1](https://apidocs.io/illustration/python?step=installDependencies&workspaceFolder=CalculatorService-Python)
+![Building SDK - Step 1](https://apidocs.io/illustration/python?step=installDependencies&workspaceFolder=APIMATIC%20Calculator-Python)
 
 
 ## How to Use
 
-The following section explains how to use the Calculatorservice SDK package in a new project.
+The following section explains how to use the Apimaticcalculator SDK package in a new project.
 
 ### 1. Open Project in an IDE
 
@@ -28,17 +30,17 @@ Open up a Python IDE like PyCharm. The basic workflow presented here is also app
 
 Click on ```Open``` in PyCharm to browse to your generated SDK directory and then click ```OK```.
 
-![Open project in PyCharm - Step 2](https://apidocs.io/illustration/python?step=openProject0&workspaceFolder=CalculatorService-Python)     
+![Open project in PyCharm - Step 2](https://apidocs.io/illustration/python?step=openProject0&workspaceFolder=APIMATIC%20Calculator-Python)     
 
 The project files will be displayed in the side bar as follows:
 
-![Open project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=openProject1&workspaceFolder=CalculatorService-Python&projectName=calculatorservice)     
+![Open project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=openProject1&workspaceFolder=APIMATIC%20Calculator-Python&projectName=apimaticcalculator)     
 
 ### 2. Add a new Test Project
 
 Create a new directory by right clicking on the solution name as shown below:
 
-![Add a new project in PyCharm - Step 1](https://apidocs.io/illustration/python?step=createDirectory&workspaceFolder=CalculatorService-Python&projectName=calculatorservice)
+![Add a new project in PyCharm - Step 1](https://apidocs.io/illustration/python?step=createDirectory&workspaceFolder=APIMATIC%20Calculator-Python&projectName=apimaticcalculator)
 
 Name the directory as "test"
 
@@ -46,7 +48,7 @@ Name the directory as "test"
    
 Add a python file to this project with the name "testsdk"
 
-![Add a new project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=createFile&workspaceFolder=CalculatorService-Python&projectName=calculatorservice)
+![Add a new project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=createFile&workspaceFolder=APIMATIC%20Calculator-Python&projectName=apimaticcalculator)
 
 Name it "testsdk"
 
@@ -55,10 +57,10 @@ Name it "testsdk"
 In your python file you will be required to import the generated python library using the following code lines
 
 ```Python
-from calculatorservice.calculatorservice_client import CalculatorserviceClient
+from apimaticcalculator.apimaticcalculator_client import ApimaticcalculatorClient
 ```
 
-![Add a new project in PyCharm - Step 4](https://apidocs.io/illustration/python?step=projectFiles&workspaceFolder=CalculatorService-Python&libraryName=calculatorservice.calculatorservice_client&projectName=calculatorservice)
+![Add a new project in PyCharm - Step 4](https://apidocs.io/illustration/python?step=projectFiles&workspaceFolder=APIMATIC%20Calculator-Python&libraryName=apimaticcalculator.apimaticcalculator_client&projectName=apimaticcalculator)
 
 After this you can write code to instantiate an API client object, get a controller object and  make API calls. Sample code is given in the subsequent sections.
 
@@ -66,7 +68,7 @@ After this you can write code to instantiate an API client object, get a control
 
 To run the file within your test project, right click on your Python file inside your Test project and click on ```Run```
 
-![Run Test Project - Step 1](https://apidocs.io/illustration/python?step=runProject&workspaceFolder=CalculatorService-Python&libraryName=calculatorservice.calculatorservice_client&projectName=calculatorservice)
+![Run Test Project - Step 1](https://apidocs.io/illustration/python?step=runProject&workspaceFolder=APIMATIC%20Calculator-Python&libraryName=apimaticcalculator.apimaticcalculator_client&projectName=apimaticcalculator)
 
 
 ## How to Test
@@ -81,13 +83,22 @@ runner. You can run the tests as follows:
 
 ## Initialization
 
-### 
+### Authentication
+In order to setup authentication and initialization of the API client, you need the following information.
+
+| Parameter | Description |
+|-----------|-------------|
+| o_auth_access_token | OAuth 2.0 Access Token |
+
+
 
 API client can be initialized as following.
 
 ```python
+# Configuration parameters and credentials
+o_auth_access_token = 'o_auth_access_token' # OAuth 2.0 Access Token
 
-client = CalculatorserviceClient()
+client = ApimaticcalculatorClient(o_auth_access_token)
 ```
 
 
@@ -96,27 +107,26 @@ client = CalculatorserviceClient()
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [DefaultBindingICalculatorController](#default_binding_i_calculator_controller)
+* [APIController](#api_controller)
+* [SimpleCalculatorController](#simple_calculator_controller)
 
-## <a name="default_binding_i_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DefaultBindingICalculatorController") DefaultBindingICalculatorController
+## <a name="api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".APIController") APIController
 
 ### Get controller instance
 
-An instance of the ``` DefaultBindingICalculatorController ``` class can be accessed from the API Client.
+An instance of the ``` APIController ``` class can be accessed from the API Client.
 
 ```python
- default_binding_i_calculator_client = client.default_binding_i_calculator
+ client_client = client.client
 ```
 
-### <a name="add"></a>![Method: ](https://apidocs.io/img/method.png ".DefaultBindingICalculatorController.add") add
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="new"></a>![Method: ](https://apidocs.io/img/method.png ".APIController.new") new
 
 > TODO: Add a method description
 
 ```python
-def add(self,
-                body)
+def new(self,
+                options=dict())
 ```
 
 #### Parameters
@@ -124,44 +134,82 @@ def add(self,
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | body |  ``` Required ```  | TODO: Add a parameter description |
+| cacheControl |  ``` Required ```  | TODO: Add a parameter description |
+| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| postmanToken |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
 #### Example Usage
 
 ```python
-body = ICalculatorAddInputMessage()
+collect = {}
 
-result = default_binding_i_calculator_client.add(body)
+body = NewRequest()
+collect['body'] = body
+
+cache_control = 'cache-control'
+collect['cache_control'] = cache_control
+
+content_type = 'content-type'
+collect['content_type'] = content_type
+
+postman_token = 'postman-token'
+collect['postman_token'] = postman_token
+
+
+result = client_client.new(collect)
 
 ```
 
 
-### <a name="create_subtract"></a>![Method: ](https://apidocs.io/img/method.png ".DefaultBindingICalculatorController.create_subtract") create_subtract
+[Back to List of Controllers](#list_of_controllers)
 
-> *Tags:*  ``` Skips Authentication ``` 
+## <a name="simple_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SimpleCalculatorController") SimpleCalculatorController
 
-> TODO: Add a method description
+### Get controller instance
+
+An instance of the ``` SimpleCalculatorController ``` class can be accessed from the API Client.
 
 ```python
-def create_subtract(self,
-                        body)
+ simple_calculator_client = client.simple_calculator
+```
+
+### <a name="get_calculate"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculatorController.get_calculate") get_calculate
+
+> Calculates the expression using the specified operation.
+
+```python
+def get_calculate(self,
+                      options=dict())
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
+| operation |  ``` Required ```  | The operator to apply on the variables |
+| x |  ``` Required ```  | The LHS value |
+| y |  ``` Required ```  | The RHS value |
 
 
 
 #### Example Usage
 
 ```python
-body = ICalculatorSubtractInputMessage()
+collect = {}
 
-result = default_binding_i_calculator_client.create_subtract(body)
+operation = OperationTypeEnum.MULTIPLY
+collect['operation'] = operation
+
+x = 4
+collect['x'] = x
+
+y = 5
+collect['y'] = y
+
+
+result = simple_calculator_client.get_calculate(collect)
 
 ```
 

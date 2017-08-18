@@ -1,5 +1,7 @@
 # Getting started
 
+Simple calculator API hosted on APIMATIC
+
 ## How to Build
 
 The generated code has dependencies over external libraries like UniRest. These dependencies are defined in the ```composer.json``` file that comes with the SDK. 
@@ -10,7 +12,7 @@ Open command prompt and type ```composer --version```. This should display the c
 * Using command line, navigate to the directory containing the generated files (including ```composer.json```) for the SDK. 
 * Run the command ```composer install```. This should install all the required dependencies and create the ```vendor``` directory in your project directory.
 
-![Building SDK - Step 1](https://apidocs.io/illustration/php?step=installDependencies&workspaceFolder=CalculatorService-PHP)
+![Building SDK - Step 1](https://apidocs.io/illustration/php?step=installDependencies&workspaceFolder=APIMATIC%20Calculator-PHP)
 
 ### [For Windows Users Only] Configuring CURL Certificate Path in php.ini
 
@@ -28,35 +30,35 @@ CURL used to include a list of accepted CAs, but no longer bundles ANY CA certs.
 
 ## How to Use
 
-The following section explains how to use the CalculatorService library in a new project.
+The following section explains how to use the APIMATICCalculator library in a new project.
 
 ### 1. Open Project in an IDE
 
 Open an IDE for PHP like PhpStorm. The basic workflow presented here is also applicable if you prefer using a different editor or IDE.
 
-![Open project in PHPStorm - Step 1](https://apidocs.io/illustration/php?step=openIDE&workspaceFolder=CalculatorService-PHP)
+![Open project in PHPStorm - Step 1](https://apidocs.io/illustration/php?step=openIDE&workspaceFolder=APIMATIC%20Calculator-PHP)
 
 Click on ```Open``` in PhpStorm to browse to your generated SDK directory and then click ```OK```.
 
-![Open project in PHPStorm - Step 2](https://apidocs.io/illustration/php?step=openProject0&workspaceFolder=CalculatorService-PHP)     
+![Open project in PHPStorm - Step 2](https://apidocs.io/illustration/php?step=openProject0&workspaceFolder=APIMATIC%20Calculator-PHP)     
 
 ### 2. Add a new Test Project
 
 Create a new directory by right clicking on the solution name as shown below:
 
-![Add a new project in PHPStorm - Step 1](https://apidocs.io/illustration/php?step=createDirectory&workspaceFolder=CalculatorService-PHP)
+![Add a new project in PHPStorm - Step 1](https://apidocs.io/illustration/php?step=createDirectory&workspaceFolder=APIMATIC%20Calculator-PHP)
 
 Name the directory as "test"
 
-![Add a new project in PHPStorm - Step 2](https://apidocs.io/illustration/php?step=nameDirectory&workspaceFolder=CalculatorService-PHP)
+![Add a new project in PHPStorm - Step 2](https://apidocs.io/illustration/php?step=nameDirectory&workspaceFolder=APIMATIC%20Calculator-PHP)
    
 Add a PHP file to this project
 
-![Add a new project in PHPStorm - Step 3](https://apidocs.io/illustration/php?step=createFile&workspaceFolder=CalculatorService-PHP)
+![Add a new project in PHPStorm - Step 3](https://apidocs.io/illustration/php?step=createFile&workspaceFolder=APIMATIC%20Calculator-PHP)
 
 Name it "testSDK"
 
-![Add a new project in PHPStorm - Step 4](https://apidocs.io/illustration/php?step=nameFile&workspaceFolder=CalculatorService-PHP)
+![Add a new project in PHPStorm - Step 4](https://apidocs.io/illustration/php?step=nameFile&workspaceFolder=APIMATIC%20Calculator-PHP)
 
 Depending on your project setup, you might need to include composer's autoloader in your PHP code to enable auto loading of classes.
 
@@ -66,7 +68,7 @@ require_once "../vendor/autoload.php";
 
 It is important that the path inside require_once correctly points to the file ```autoload.php``` inside the vendor directory created during dependency installations.
 
-![Add a new project in PHPStorm - Step 4](https://apidocs.io/illustration/php?step=projectFiles&workspaceFolder=CalculatorService-PHP)
+![Add a new project in PHPStorm - Step 4](https://apidocs.io/illustration/php?step=projectFiles&workspaceFolder=APIMATIC%20Calculator-PHP)
 
 After this you can add code to initialize the client library and acquire the instance of a Controller class. Sample code to initialize the client library and using controller methods is given in the subsequent sections.
 
@@ -76,23 +78,23 @@ To run your project you must set the Interpreter for your project. Interpreter i
 
 Open ```Settings``` from ```File``` menu.
 
-![Run Test Project - Step 1](https://apidocs.io/illustration/php?step=openSettings&workspaceFolder=CalculatorService-PHP)
+![Run Test Project - Step 1](https://apidocs.io/illustration/php?step=openSettings&workspaceFolder=APIMATIC%20Calculator-PHP)
 
 Select ```PHP``` from within ```Languages & Frameworks```
 
-![Run Test Project - Step 2](https://apidocs.io/illustration/php?step=setInterpreter0&workspaceFolder=CalculatorService-PHP)
+![Run Test Project - Step 2](https://apidocs.io/illustration/php?step=setInterpreter0&workspaceFolder=APIMATIC%20Calculator-PHP)
 
 Browse for Interpreters near the ```Interpreter``` option and choose your interpreter.
 
-![Run Test Project - Step 3](https://apidocs.io/illustration/php?step=setInterpreter1&workspaceFolder=CalculatorService-PHP)
+![Run Test Project - Step 3](https://apidocs.io/illustration/php?step=setInterpreter1&workspaceFolder=APIMATIC%20Calculator-PHP)
 
 Once the interpreter is selected, click ```OK```
 
-![Run Test Project - Step 4](https://apidocs.io/illustration/php?step=setInterpreter2&workspaceFolder=CalculatorService-PHP)
+![Run Test Project - Step 4](https://apidocs.io/illustration/php?step=setInterpreter2&workspaceFolder=APIMATIC%20Calculator-PHP)
 
 To run your project, right click on your PHP file inside your Test project and click on ```Run```
 
-![Run Test Project - Step 5](https://apidocs.io/illustration/php?step=runProject&workspaceFolder=CalculatorService-PHP)
+![Run Test Project - Step 5](https://apidocs.io/illustration/php?step=runProject&workspaceFolder=APIMATIC%20Calculator-PHP)
 
 ## How to Test
 
@@ -106,13 +108,21 @@ You can change the PHPUnit test configuration in the `phpunit.xml` file.
 
 ## Initialization
 
-### 
+### Authentication
+In order to setup authentication and initialization of the API client, you need the following information.
+
+| Parameter | Description |
+|-----------|-------------|
+| oAuthAccessToken | OAuth 2.0 Access Token |
+
+
 
 API client can be initialized as following.
 
 ```php
+$oAuthAccessToken = 'oAuthAccessToken'; // OAuth 2.0 Access Token
 
-$client = new CalculatorServiceLib\CalculatorServiceClient();
+$client = new APIMATICCalculatorLib\APIMATICCalculatorClient($oAuthAccessToken);
 ```
 
 
@@ -120,27 +130,26 @@ $client = new CalculatorServiceLib\CalculatorServiceClient();
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [DefaultBindingICalculatorController](#default_binding_i_calculator_controller)
+* [APIController](#api_controller)
+* [SimpleCalculatorController](#simple_calculator_controller)
 
-## <a name="default_binding_i_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DefaultBindingICalculatorController") DefaultBindingICalculatorController
+## <a name="api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".APIController") APIController
 
 ### Get singleton instance
 
-The singleton instance of the ``` DefaultBindingICalculatorController ``` class can be accessed from the API Client.
+The singleton instance of the ``` APIController ``` class can be accessed from the API Client.
 
 ```php
-$defaultBindingICalculator = $client->getDefaultBindingICalculator();
+$client = $client->getClient();
 ```
 
-### <a name="add"></a>![Method: ](https://apidocs.io/img/method.png ".DefaultBindingICalculatorController.add") add
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="mnew"></a>![Method: ](https://apidocs.io/img/method.png ".APIController.mnew") mnew
 
 > TODO: Add a method description
 
 
 ```php
-function add($body)
+function mnew($options)
 ```
 
 #### Parameters
@@ -148,44 +157,78 @@ function add($body)
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | body |  ``` Required ```  | TODO: Add a parameter description |
+| cacheControl |  ``` Required ```  | TODO: Add a parameter description |
+| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| postmanToken |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
 #### Example Usage
 
 ```php
-$body = new ICalculatorAddInputMessage();
+$body = new NewRequest();
+$collect['body'] = $body;
 
-$result = $defaultBindingICalculator->add($body);
+$cacheControl = 'cache-control';
+$collect['cacheControl'] = $cacheControl;
+
+$contentType = 'content-type';
+$collect['contentType'] = $contentType;
+
+$postmanToken = 'postman-token';
+$collect['postmanToken'] = $postmanToken;
+
+
+$result = $client->mnew($collect);
 
 ```
 
 
-### <a name="create_subtract"></a>![Method: ](https://apidocs.io/img/method.png ".DefaultBindingICalculatorController.createSubtract") createSubtract
+[Back to List of Controllers](#list_of_controllers)
 
-> *Tags:*  ``` Skips Authentication ``` 
+## <a name="simple_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SimpleCalculatorController") SimpleCalculatorController
 
-> TODO: Add a method description
+### Get singleton instance
+
+The singleton instance of the ``` SimpleCalculatorController ``` class can be accessed from the API Client.
+
+```php
+$simpleCalculator = $client->getSimpleCalculator();
+```
+
+### <a name="get_calculate"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculatorController.getCalculate") getCalculate
+
+> Calculates the expression using the specified operation.
 
 
 ```php
-function createSubtract($body)
+function getCalculate($options)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
+| operation |  ``` Required ```  | The operator to apply on the variables |
+| x |  ``` Required ```  | The LHS value |
+| y |  ``` Required ```  | The RHS value |
 
 
 
 #### Example Usage
 
 ```php
-$body = new ICalculatorSubtractInputMessage();
+$operation = string::MULTIPLY;
+$collect['operation'] = $operation;
 
-$result = $defaultBindingICalculator->createSubtract($body);
+$x = 4;
+$collect['x'] = $x;
+
+$y = 5;
+$collect['y'] = $y;
+
+
+$result = $simpleCalculator->getCalculate($collect);
 
 ```
 

@@ -1,5 +1,7 @@
 # Getting started
 
+Simple calculator API hosted on APIMATIC
+
 ## How to Build
 
 The generated SDK requires AngularJS framework to work. If you do not already have angular downloaded, please go ahead and do it from [here](https://angularjs.org/).
@@ -13,10 +15,10 @@ The following section describes how to use the generated SDK in an existing/new 
 Perform the following steps to configure angular and the SDK:
 + Make a `scripts` folder inside the root folder of the project. If you already have a `scripts` folder, skip to the next step.
 + Move the `angular.min.js` file inside the scripts folder. 
-+ Move the `CalculatorServiceLib` folder inside the scripts folder.
++ Move the `APIMATICCalculatorLib` folder inside the scripts folder.
 + If any of the Custom Types in your API have `Date`/`Datetime` type fields or any endpoint has `Date`/`Datetime` response, you will need to download angular-moment and moment.js. Move these 2 files into the `scripts` folder as well.
 
-![folder-structure-image](https://apidocs.io/illustration/angularjs?step=folderStructure&workspaceFolder=CalculatorService-Angular&projectName=CalculatorServiceLib)
+![folder-structure-image](https://apidocs.io/illustration/angularjs?step=folderStructure&workspaceFolder=APIMATIC%20Calculator-Angular&projectName=APIMATICCalculatorLib)
 
 ### 2. Open Project Folder
 Open an IDE/Text Editor for JavaScript like Sublime Text. The basic workflow presented here is also applicable if you prefer using a different editor or IDE.  
@@ -24,7 +26,7 @@ Click on `File` and select `Open Folder`
 
 Select the folder of your SDK and click on `Select Folder` to open it up in Sublime Text. The folder will become visible in the bar on the left.
 
-![open-folder-image](https://apidocs.io/illustration/angularjs?step=openFolder&workspaceFolder=CalculatorService-Angular)
+![open-folder-image](https://apidocs.io/illustration/angularjs?step=openFolder&workspaceFolder=APIMATIC%20Calculator-Angular)
 
 ### 3. Create an Angular Application
 Since Angular JS is used for client-side web development, in order to use the generated library, you will have to develop an application first.
@@ -61,7 +63,7 @@ Skip to the next step if you are working with an existing project and already ha
 </html>
 ```
 
-![initial-html-code-image](https://apidocs.io/illustration/angularjs?step=initialCode&workspaceFolder=CalculatorService-Angular)
+![initial-html-code-image](https://apidocs.io/illustration/angularjs?step=initialCode&workspaceFolder=APIMATIC%20Calculator-Angular)
 
 ### 5. Including links to Angular in HTML file
 Your HTML file needs to have a link to `angular.min.js` file to use Angular-JS. Add the link using `script` tags inside the `head` section of `index.html` like:
@@ -81,31 +83,29 @@ Import the reference to the generated SDK files inside your html file like:
 <head>
     ...
     <!-- Helper files -->
-    <script src="scripts/CalculatorServiceLib/Module.js"></script>
-    <script src="scripts/CalculatorServiceLib/Configuration.js"></script>
-    <script src="scripts/CalculatorServiceLib/ModelFactory.js"></script>
-    <script src="scripts/CalculatorServiceLib/ObjectMapper.js"></script>
-    <script src="scripts/CalculatorServiceLib/APIHelper.js"></script>
-    <script src="scripts/CalculatorServiceLib/Http/Client/HttpContext.js"></script>
-    <script src="scripts/CalculatorServiceLib/Http/Client/RequestClient.js"></script>
-    <script src="scripts/CalculatorServiceLib/Http/Request/HttpRequest.js"></script>
-    <script src="scripts/CalculatorServiceLib/Http/Response/HttpResponse.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Module.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Configuration.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/ModelFactory.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/ObjectMapper.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/APIHelper.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Http/Client/HttpContext.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Http/Client/RequestClient.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Http/Request/HttpRequest.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Http/Response/HttpResponse.js"></script>
 
     <!-- API Controllers -->
-    <script src="scripts/CalculatorServiceLib/Controllers/BaseController.js"></script>
-    <script src="scripts/CalculatorServiceLib/Controllers/DefaultBindingICalculatorController.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Controllers/BaseController.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Controllers/APIController.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Controllers/SimpleCalculatorController.js"></script>
 
 
     <!-- Models -->
-    <script src="scripts/CalculatorServiceLib/Models/BaseModel.js"></script>
-    <script src="scripts/CalculatorServiceLib/Models/Add.js"></script>
-    <script src="scripts/CalculatorServiceLib/Models/AddResponse.js"></script>
-    <script src="scripts/CalculatorServiceLib/Models/Subtract.js"></script>
-    <script src="scripts/CalculatorServiceLib/Models/SubtractResponse.js"></script>
-    <script src="scripts/CalculatorServiceLib/Models/ICalculatorAddOutputMessage.js"></script>
-    <script src="scripts/CalculatorServiceLib/Models/ICalculatorSubtractOutputMessage.js"></script>
-    <script src="scripts/CalculatorServiceLib/Models/ICalculatorAddInputMessage.js"></script>
-    <script src="scripts/CalculatorServiceLib/Models/ICalculatorSubtractInputMessage.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Models/BaseModel.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Models/Advance.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Models/New.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Models/DATA.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Models/NewRequest.js"></script>
+    <script src="scripts/APIMATICCalculatorLib/Models/OperationTypeEnum.js"></script>
 
     ...
 </head>
@@ -146,7 +146,7 @@ In order to use the generated SDK's modules, controllers and factories, the proj
 Add the dependency like this:
 
 ```js
-var app = angular.module('myApp', ['CalculatorServiceLib']);
+var app = angular.module('myApp', ['APIMATICCalculatorLib']);
 ```
 At this point, the SDK has been successfully included in your project. Further steps include using a service/factory from the generated SDK. To see working example of this, please head on [over here](#list-of-controllers) and choose any class to see its functions and example usage.  
 
@@ -160,12 +160,32 @@ To run the app, simply open up the `index.html` file in a browser.
 
 The Angular Application can be initialized as following:
 ```JavaScript
-var app = angular.module('myApp', [CalculatorServiceLib]);
+var app = angular.module('myApp', [APIMATICCalculatorLib]);
 // now controllers/services can be created which import
 // the factories provided by the sdk
 ```
-### 
+### Authentication
+In order to setup authentication and initialization of the Angular App, you need the following information.
 
+| Parameter | Description |
+|-----------|-------------|
+| oAuthAccessToken | OAuth 2.0 Access Token |
+
+
+
+```JavaScript
+var app = angular.module('myApp', [APIMATICCalculatorLib]);
+app.factory('config', function($scope, Configuration) 
+{
+    return {
+        setConfigVars: function() {
+            // Configuration parameters and credentials
+            Configuration.oAuthAccessToken = 'oAuthAccessToken'; // OAuth 2.0 Access Token
+            
+        }
+    };
+});
+```
 
 
 
@@ -173,34 +193,36 @@ var app = angular.module('myApp', [CalculatorServiceLib]);
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [DefaultBindingICalculatorController](#default_binding_i_calculator_controller)
+* [APIController](#api_controller)
+* [SimpleCalculatorController](#simple_calculator_controller)
 
-## <a name="default_binding_i_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DefaultBindingICalculatorController") DefaultBindingICalculatorController
+## <a name="api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".APIController") APIController
 
 ### Get singleton instance
 
-The singleton instance of the ``` DefaultBindingICalculatorController ``` class can be accessed via Dependency Injection.
+The singleton instance of the ``` APIController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, DefaultBindingICalculatorController, ICalculatorAddOutputMessage, ICalculatorSubtractOutputMessage){
+	app.controller("testController", function($scope, APIController){
 	});
 ```
 
-### <a name="add"></a>![Method: ](https://apidocs.io/img/method.png ".DefaultBindingICalculatorController.add") add
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="new"></a>![Method: ](https://apidocs.io/img/method.png ".APIController.new") new
 
 > TODO: Add a method description
 
 
 ```javascript
-function add(body)
+function new(input)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | body |  ``` Required ```  | TODO: Add a parameter description |
+| cacheControl |  ``` Required ```  | TODO: Add a parameter description |
+| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| postmanToken |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -209,11 +231,15 @@ function add(body)
 ```javascript
 
 
-	app.controller("testController", function($scope, DefaultBindingICalculatorController, ICalculatorAddOutputMessage){
-        var body = new ICalculatorAddInputMessage({"key":"value"});
+	app.controller("testController", function($scope, APIController){
+        var input = [];
+        input['body'] = new NewRequest({"key":"value"});
+        input['cacheControl'] = 'cache-control';
+        input['contentType'] = 'content-type';
+        input['postmanToken'] = 'postman-token';
 
 
-		var result = DefaultBindingICalculatorController.add(body);
+		var result = APIController.new(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -228,21 +254,34 @@ function add(body)
 
 
 
-### <a name="create_subtract"></a>![Method: ](https://apidocs.io/img/method.png ".DefaultBindingICalculatorController.createSubtract") createSubtract
+[Back to List of Controllers](#list_of_controllers)
 
-> *Tags:*  ``` Skips Authentication ``` 
+## <a name="simple_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SimpleCalculatorController") SimpleCalculatorController
 
-> TODO: Add a method description
+### Get singleton instance
+
+The singleton instance of the ``` SimpleCalculatorController ``` class can be accessed via Dependency Injection.
+
+```js
+	app.controller("testController", function($scope, SimpleCalculatorController){
+	});
+```
+
+### <a name="get_calculate"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculatorController.getCalculate") getCalculate
+
+> Calculates the expression using the specified operation.
 
 
 ```javascript
-function createSubtract(body)
+function getCalculate(input)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
+| operation |  ``` Required ```  | The operator to apply on the variables |
+| x |  ``` Required ```  | The LHS value |
+| y |  ``` Required ```  | The RHS value |
 
 
 
@@ -251,11 +290,14 @@ function createSubtract(body)
 ```javascript
 
 
-	app.controller("testController", function($scope, DefaultBindingICalculatorController, ICalculatorSubtractOutputMessage){
-        var body = new ICalculatorSubtractInputMessage({"key":"value"});
+	app.controller("testController", function($scope, SimpleCalculatorController){
+        var input = [];
+        input['operation'] = new OperationTypeEnum(MULTIPLY);
+        input['x'] = 4;
+        input['y'] = 5;
 
 
-		var result = DefaultBindingICalculatorController.createSubtract(body);
+		var result = SimpleCalculatorController.getCalculate(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case

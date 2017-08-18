@@ -1,5 +1,7 @@
 # Getting started
 
+Simple calculator API hosted on APIMATIC
+
 ## How to Build
 
 
@@ -11,58 +13,67 @@ Open command prompt and type ```pod --version```. This should display the curren
 Using command line, navigate to the directory containing the generated files (including ```PodFile```) for the SDK. 
 Run the command ```pod install```. This should install all the required dependencies and create the ```pods``` directory in your project directory.
 
-![Installing dependencies using Cocoapods](https://apidocs.io/illustration/objc?step=AddDependencies&workspaceFolder=CalculatorService-ObjC&workspaceName=CalculatorService&projectName=CalculatorService&rootNamespace=CalculatorService)
+![Installing dependencies using Cocoapods](https://apidocs.io/illustration/objc?step=AddDependencies&workspaceFolder=APIMATIC%20Calculator-ObjC&workspaceName=APIMATICCalculator&projectName=APIMATICCalculator&rootNamespace=APIMATICCalculator)
 
-Open the project workspace using the (CalculatorService.xcworkspace) file. Invoke the build process using `Command(⌘)+B` shortcut key or using the `Build` menu as shown below.
+Open the project workspace using the (APIMATICCalculator.xcworkspace) file. Invoke the build process using `Command(⌘)+B` shortcut key or using the `Build` menu as shown below.
 
-![Building SDK using Xcode](https://apidocs.io/illustration/objc?step=BuildSDK&workspaceFolder=CalculatorService-ObjC&workspaceName=CalculatorService&projectName=CalculatorService&rootNamespace=CalculatorService)
+![Building SDK using Xcode](https://apidocs.io/illustration/objc?step=BuildSDK&workspaceFolder=APIMATIC%20Calculator-ObjC&workspaceName=APIMATICCalculator&projectName=APIMATICCalculator&rootNamespace=APIMATICCalculator)
 
 
 ## How to Use
 
 The generated code is a Cocoa Touch Static Library which can be used in any iOS project. The support for these generated libraries go all the way back to iOS 6.
 
-The following section explains how to use the CalculatorService library in a new iOS project.     
+The following section explains how to use the APIMATICCalculator library in a new iOS project.     
 ### 1. Starting a new project
 To start a new project, left-click on the ```Create a new Xcode project```.
-![Create Test Project - Step 1](https://apidocs.io/illustration/objc?step=Test1&workspaceFolder=CalculatorService-ObjC&workspaceName=CalculatorService&projectName=CalculatorService&rootNamespace=CalculatorService)
+![Create Test Project - Step 1](https://apidocs.io/illustration/objc?step=Test1&workspaceFolder=APIMATIC%20Calculator-ObjC&workspaceName=APIMATICCalculator&projectName=APIMATICCalculator&rootNamespace=APIMATICCalculator)
 
 Next, choose **Single View Application** and click ```Next```.
-![Create Test Project - Step 2](https://apidocs.io/illustration/objc?step=Test2&workspaceFolder=CalculatorService-ObjC&workspaceName=CalculatorService&projectName=CalculatorService&rootNamespace=CalculatorService)
+![Create Test Project - Step 2](https://apidocs.io/illustration/objc?step=Test2&workspaceFolder=APIMATIC%20Calculator-ObjC&workspaceName=APIMATICCalculator&projectName=APIMATICCalculator&rootNamespace=APIMATICCalculator)
 
 Provide **Test-Project** as the product name click ```Next```.
-![Create Test Project - Step 3](https://apidocs.io/illustration/objc?step=Test3&workspaceFolder=CalculatorService-ObjC&workspaceName=CalculatorService&projectName=CalculatorService&rootNamespace=CalculatorService)
+![Create Test Project - Step 3](https://apidocs.io/illustration/objc?step=Test3&workspaceFolder=APIMATIC%20Calculator-ObjC&workspaceName=APIMATICCalculator&projectName=APIMATICCalculator&rootNamespace=APIMATICCalculator)
 
 Choose the desired location of your project folder and click ```Create```.
-![Create Test Project - Step 4](https://apidocs.io/illustration/objc?step=Test4&workspaceFolder=CalculatorService-ObjC&workspaceName=CalculatorService&projectName=CalculatorService&rootNamespace=CalculatorService)
+![Create Test Project - Step 4](https://apidocs.io/illustration/objc?step=Test4&workspaceFolder=APIMATIC%20Calculator-ObjC&workspaceName=APIMATICCalculator&projectName=APIMATICCalculator&rootNamespace=APIMATICCalculator)
 
 ### 2. Adding the static library dependency
 To add this dependency open a terminal and navigate to your project folder. Next, input ```pod init``` and press enter.
-![Add dependency - Step 1](https://apidocs.io/illustration/objc?step=Add0&workspaceFolder=CalculatorService-ObjC&workspaceName=CalculatorService&projectName=CalculatorService&rootNamespace=CalculatorService)
+![Add dependency - Step 1](https://apidocs.io/illustration/objc?step=Add0&workspaceFolder=APIMATIC%20Calculator-ObjC&workspaceName=APIMATICCalculator&projectName=APIMATICCalculator&rootNamespace=APIMATICCalculator)
 
-Next, open the newly created ```PodFile``` in your favourite text editor. Add the following line : pod 'CalculatorService', :path => 'Vendor/CalculatorService'
-![Add dependency - Step 2](https://apidocs.io/illustration/objc?step=Add1&workspaceFolder=CalculatorService-ObjC&workspaceName=CalculatorService&projectName=CalculatorService&rootNamespace=CalculatorService)
+Next, open the newly created ```PodFile``` in your favourite text editor. Add the following line : pod 'APIMATICCalculator', :path => 'Vendor/APIMATICCalculator'
+![Add dependency - Step 2](https://apidocs.io/illustration/objc?step=Add1&workspaceFolder=APIMATIC%20Calculator-ObjC&workspaceName=APIMATICCalculator&projectName=APIMATICCalculator&rootNamespace=APIMATICCalculator)
 
 Execute `pod install` from terminal to install the dependecy in your project. This would add the dependency to the newly created test project.
-![Add dependency - Step 3](https://apidocs.io/illustration/objc?step=Add2&workspaceFolder=CalculatorService-ObjC&workspaceName=CalculatorService&projectName=CalculatorService&rootNamespace=CalculatorService)
+![Add dependency - Step 3](https://apidocs.io/illustration/objc?step=Add2&workspaceFolder=APIMATIC%20Calculator-ObjC&workspaceName=APIMATICCalculator&projectName=APIMATICCalculator&rootNamespace=APIMATICCalculator)
 
 
 ## How to Test
 
 Unit tests in this SDK can be run using Xcode. 
 
-First build the SDK as shown in the steps above and naivgate to the project directory and open the CalculatorService.xcworkspace file.
+First build the SDK as shown in the steps above and naivgate to the project directory and open the APIMATICCalculator.xcworkspace file.
 
 Go to the test explorer in Xcode as shown in the picture below and click on `run tests` from the menu. 
-![Run tests](https://apidocs.io/illustration/objc?step=RunTests&workspaceFolder=CalculatorService-ObjC&workspaceName=CalculatorService&projectName=CalculatorService&rootNamespace=CalculatorService)
+![Run tests](https://apidocs.io/illustration/objc?step=RunTests&workspaceFolder=APIMATIC%20Calculator-ObjC&workspaceName=APIMATICCalculator&projectName=APIMATICCalculator&rootNamespace=APIMATICCalculator)
 
 
 ## Initialization
 
-### 
+### Authentication
+In order to setup authentication and initialization of the API client, you need the following information.
+
+| Parameter | Description |
+|-----------|-------------|
+| oAuthAccessToken | OAuth 2.0 Access Token |
+
+
 
 Configuration variables can be set as following.
 ```Objc
+// Configuration parameters and credentials
+Configuration_OAuthAccessToken = "Configuration_OAuthAccessToken"; // OAuth 2.0 Access Token
 
 ```
 
@@ -70,25 +81,24 @@ Configuration variables can be set as following.
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [DefaultBindingICalculatorController](#default_binding_i_calculator_controller)
+* [APIController](#api_controller)
+* [SimpleCalculatorController](#simple_calculator_controller)
 
-## <a name="default_binding_i_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DefaultBindingICalculatorController") DefaultBindingICalculatorController
+## <a name="api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".APIController") APIController
 
 ### Get singleton instance
 ```objc
-DefaultBindingICalculator* defaultBindingICalculator = [[DefaultBindingICalculator alloc]init] ;
+Client* client = [[Client alloc]init] ;
 ```
 
-### <a name="add_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".DefaultBindingICalculatorController.addAsyncWithBody") addAsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="mnew_async_with_new_input"></a>![Method: ](https://apidocs.io/img/method.png ".APIController.mnewAsyncWithNewInput") mnewAsyncWithNewInput
 
 > TODO: Add a method description
 
 
 ```objc
-function addAsyncWithBody:(ICalculatorAddInputMessage*) body
-                completionBlock:(CompletedPostAdd) onCompleted(body)
+function mnewAsyncWithNewInput:(NewInput*) input
+                completionBlock:(CompletedPostNew) onCompleted(input)
 ```
 
 #### Parameters
@@ -96,6 +106,9 @@ function addAsyncWithBody:(ICalculatorAddInputMessage*) body
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | body |  ``` Required ```  | TODO: Add a parameter description |
+| cacheControl |  ``` Required ```  | TODO: Add a parameter description |
+| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| postmanToken |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -105,31 +118,44 @@ function addAsyncWithBody:(ICalculatorAddInputMessage*) body
 
 ```objc
     // Parameters for the API call
-    ICalculatorAddInputMessage* body = [[ICalculatorAddInputMessage alloc]init];
+    NewInput *input = [[NewInput alloc]init];
+    input.body = [[NewRequest alloc]init];
+    input.cacheControl = @"cache-control";
+    input.contentType = @"content-type";
+    input.postmanToken = @"postman-token";
 
-    [self.defaultBindingICalculator addAsyncWithBody: body  completionBlock:^(BOOL success, HttpContext* context, ICalculatorAddOutputMessage* response, NSError* error) { 
+    [self.client mnewAsyncWithNewInput: input completionBlock:^(BOOL success, HttpContext* context, id response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_subtract_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".DefaultBindingICalculatorController.createSubtractAsyncWithBody") createSubtractAsyncWithBody
+[Back to List of Controllers](#list_of_controllers)
 
-> *Tags:*  ``` Skips Authentication ``` 
+## <a name="simple_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SimpleCalculatorController") SimpleCalculatorController
 
-> TODO: Add a method description
+### Get singleton instance
+```objc
+SimpleCalculator* simpleCalculator = [[SimpleCalculator alloc]init] ;
+```
+
+### <a name="get_calculate_async_with_get_calculate_input"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculatorController.getCalculateAsyncWithGetCalculateInput") getCalculateAsyncWithGetCalculateInput
+
+> Calculates the expression using the specified operation.
 
 
 ```objc
-function createSubtractAsyncWithBody:(ICalculatorSubtractInputMessage*) body
-                completionBlock:(CompletedPostSubtract) onCompleted(body)
+function getCalculateAsyncWithGetCalculateInput:(GetCalculateInput*) input
+                completionBlock:(CompletedGetCalculate) onCompleted(input)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
+| operation |  ``` Required ```  | The operator to apply on the variables |
+| x |  ``` Required ```  | The LHS value |
+| y |  ``` Required ```  | The RHS value |
 
 
 
@@ -139,9 +165,12 @@ function createSubtractAsyncWithBody:(ICalculatorSubtractInputMessage*) body
 
 ```objc
     // Parameters for the API call
-    ICalculatorSubtractInputMessage* body = [[ICalculatorSubtractInputMessage alloc]init];
+    GetCalculateInput *input = [[GetCalculateInput alloc]init];
+    input.operation = (enum OperationTypeEnum) [OperationTypeEnumHelper operationTypeEnumFromString: @"MULTIPLY"];
+    input.x = [@"4" doubleValue];
+    input.y = [@"5" doubleValue];
 
-    [self.defaultBindingICalculator createSubtractAsyncWithBody: body  completionBlock:^(BOOL success, HttpContext* context, ICalculatorSubtractOutputMessage* response, NSError* error) { 
+    [self.simpleCalculator getCalculateAsyncWithGetCalculateInput: input completionBlock:^(BOOL success, HttpContext* context, NSNumber* response, NSError* error) { 
        //Add code here
     }];
 ```

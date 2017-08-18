@@ -1,5 +1,7 @@
 # Getting started
 
+Simple calculator API hosted on APIMATIC
+
 ## How to Build
 
 
@@ -29,15 +31,15 @@ Now follow the steps mentioned below to build your SDK:
 
 3. In ```Select root directory```, provide path to the unzipped archive for the generated code. Once the path is set and the Project becomes visible under ```Projects``` click ```Finish```
 
-![Importing SDK into Eclipse - Step 3](https://apidocs.io/illustration/go?step=import2&workspaceFolder=CalculatorService-GoLang&projectName=calculatorservice_lib)
+![Importing SDK into Eclipse - Step 3](https://apidocs.io/illustration/go?step=import2&workspaceFolder=APIMATIC%20Calculator-GoLang&projectName=apimaticcalculator_lib)
 
 4. The Go library will be imported and its files will be visible in the Project Explorer
 
-![Importing SDK into Eclipse - Step 4](https://apidocs.io/illustration/go?step=import3&projectName=calculatorservice_lib)
+![Importing SDK into Eclipse - Step 4](https://apidocs.io/illustration/go?step=import3&projectName=apimaticcalculator_lib)
 
 ## How to Use
 
-The following section explains how to use the CalculatorserviceLib library in a new project.
+The following section explains how to use the ApimaticcalculatorLib library in a new project.
 
 ### 1. Add a new Test Project
 
@@ -51,19 +53,19 @@ Name the Project as ```Test``` and click ```Finish```
 
 Create a new directory in the ```src``` directory of this project
 
-![Create a new Maven Project - Step 2](https://apidocs.io/illustration/go?step=createNewProject2&projectName=calculatorservice_lib)
+![Create a new Maven Project - Step 2](https://apidocs.io/illustration/go?step=createNewProject2&projectName=apimaticcalculator_lib)
 
 Name it ```test.com```
 
-![Create a new Maven Project - Step 3](https://apidocs.io/illustration/go?step=createNewProject3&projectName=calculatorservice_lib)
+![Create a new Maven Project - Step 3](https://apidocs.io/illustration/go?step=createNewProject3&projectName=apimaticcalculator_lib)
 
 Now create a new file inside ```src/test.com```
 
-![Create a new Maven Project - Step 4](https://apidocs.io/illustration/go?step=createNewProject4&projectName=calculatorservice_lib)
+![Create a new Maven Project - Step 4](https://apidocs.io/illustration/go?step=createNewProject4&projectName=apimaticcalculator_lib)
 
 Name it ```testsdk.go```
 
-![Create a new Maven Project - Step 5](https://apidocs.io/illustration/go?step=createNewProject5&projectName=calculatorservice_lib)
+![Create a new Maven Project - Step 5](https://apidocs.io/illustration/go?step=createNewProject5&projectName=apimaticcalculator_lib)
 
 In this Go file, you can start adding code to initialize the client library. Sample code to initialize the client library and using its methods is given in the subsequent sections.
 
@@ -73,7 +75,7 @@ You need to import your generated library in this project in order to make use o
 
 Right click on the project name and click on ```Properties```
 
-![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/go?step=testProject0&projectName=calculatorservice_lib)
+![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/go?step=testProject0&projectName=apimaticcalculator_lib)
 
 Choose ```Go Compiler``` from the side menu. Check ```Use project specific settings``` and uncheck ```Use same value as the GOPATH environment variable.```. By default, the GOPATH value from the environment variables will be visible in ```Eclipse GOPATH```. Do not remove this as this points to the unirest dependency.
 
@@ -81,7 +83,7 @@ Choose ```Go Compiler``` from the side menu. Check ```Use project specific setti
 
 Append the library path to this GOPATH
 
-![Adding dependency to the client library - Step 3](https://apidocs.io/illustration/go?step=testProject2&workspaceFolder=CalculatorService-GoLang)
+![Adding dependency to the client library - Step 3](https://apidocs.io/illustration/go?step=testProject2&workspaceFolder=APIMATIC%20Calculator-GoLang)
 
 Once the path is appended, click on ```OK```
 
@@ -89,39 +91,51 @@ Once the path is appended, click on ```OK```
 
 Right click on the project name and click on ```Build Project```
 
-![Build Project](https://apidocs.io/illustration/go?step=buildProject&projectName=calculatorservice_lib)
+![Build Project](https://apidocs.io/illustration/go?step=buildProject&projectName=apimaticcalculator_lib)
 
 ### 4. Run the Test Project
 
 If the build is successful, right click on your Go file and click on ```Run As``` -> ```Go Application```
 
-![Run Project](https://apidocs.io/illustration/go?step=runProject&projectName=calculatorservice_lib)
+![Run Project](https://apidocs.io/illustration/go?step=runProject&projectName=apimaticcalculator_lib)
+
+## Initialization
+
+### Authentication
+In order to setup authentication of the API client, you need the following information.
+
+| Parameter | Description |
+|-----------|-------------|
+| oAuthAccessToken | OAuth 2.0 Access Token |
+
+
+To configure these for your generated code, open the file "Configuration.go" and edit it's contents.
+
 
 # Class Reference
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [defaultbinding_icalculator_pkg](#defaultbinding_icalculator_pkg)
+* [api_pkg](#api_pkg)
+* [simplecalculator_pkg](#simplecalculator_pkg)
 
-## <a name="defaultbinding_icalculator_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".defaultbinding_icalculator_pkg") defaultbinding_icalculator_pkg
+## <a name="api_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".api_pkg") api_pkg
 
 ### Get instance
 
-Factory for the ``` DEFAULTBINDING_ICALCULATOR ``` interface can be accessed from the package defaultbinding_icalculator_pkg.
+Factory for the ``` API ``` interface can be accessed from the package api_pkg.
 
 ```go
-defaultBindingICalculator := defaultbinding_icalculator_pkg.NewDEFAULTBINDING_ICALCULATOR()
+aPI := api_pkg.NewAPI()
 ```
 
-### <a name="add"></a>![Method: ](https://apidocs.io/img/method.png ".defaultbinding_icalculator_pkg.Add") Add
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="new"></a>![Method: ](https://apidocs.io/img/method.png ".api_pkg.New") New
 
 > TODO: Add a method description
 
 
 ```go
-func (me *DEFAULTBINDINGICALCULATOR_IMPL) Add(body *models_pkg.ICalculatorAddInputMessage)(*models_pkg.ICalculatorAddOutputMessage,error)
+func (me *API_IMPL) New(input *NewInput)(interface{},error)
 ```
 
 #### Parameters
@@ -129,44 +143,82 @@ func (me *DEFAULTBINDINGICALCULATOR_IMPL) Add(body *models_pkg.ICalculatorAddInp
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | body |  ``` Required ```  | TODO: Add a parameter description |
+| cacheControl |  ``` Required ```  | TODO: Add a parameter description |
+| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| postmanToken |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
 
 ```go
-var body *models_pkg.ICalculatorAddInputMessage
+collect := new (api_pkg.NewInput)
 
-var result *models_pkg.ICalculatorAddOutputMessage
-result,_ = defaultBindingICalculator.Add(body)
+var body *models_pkg.NewRequest
+collect.Body = body
+
+cacheControl := "cache-control"
+collect.CacheControl = cacheControl
+
+contentType := "content-type"
+collect.ContentType = contentType
+
+postmanToken := "postman-token"
+collect.PostmanToken = postmanToken
+
+
+var result interface{}
+result,_ = aPI.New(collect)
 
 ```
 
 
-### <a name="create_subtract"></a>![Method: ](https://apidocs.io/img/method.png ".defaultbinding_icalculator_pkg.CreateSubtract") CreateSubtract
+[Back to List of Controllers](#list_of_controllers)
 
-> *Tags:*  ``` Skips Authentication ``` 
+## <a name="simplecalculator_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".simplecalculator_pkg") simplecalculator_pkg
 
-> TODO: Add a method description
+### Get instance
+
+Factory for the ``` SIMPLECALCULATOR ``` interface can be accessed from the package simplecalculator_pkg.
+
+```go
+simpleCalculator := simplecalculator_pkg.NewSIMPLECALCULATOR()
+```
+
+### <a name="get_calculate"></a>![Method: ](https://apidocs.io/img/method.png ".simplecalculator_pkg.GetCalculate") GetCalculate
+
+> Calculates the expression using the specified operation.
 
 
 ```go
-func (me *DEFAULTBINDINGICALCULATOR_IMPL) CreateSubtract(body *models_pkg.ICalculatorSubtractInputMessage)(*models_pkg.ICalculatorSubtractOutputMessage,error)
+func (me *SIMPLECALCULATOR_IMPL) GetCalculate(input *GetCalculateInput)(*float64,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
+| operation |  ``` Required ```  | The operator to apply on the variables |
+| x |  ``` Required ```  | The LHS value |
+| y |  ``` Required ```  | The RHS value |
 
 
 #### Example Usage
 
 ```go
-var body *models_pkg.ICalculatorSubtractInputMessage
+collect := new (simplecalculator_pkg.GetCalculateInput)
 
-var result *models_pkg.ICalculatorSubtractOutputMessage
-result,_ = defaultBindingICalculator.CreateSubtract(body)
+operation := models_pkg.Operation Type_MULTIPLY
+collect.Operation = operation
+
+x := "4"
+collect.X = x
+
+y := "5"
+collect.Y = y
+
+
+var result *float64
+result,_ = simpleCalculator.GetCalculate(collect)
 
 ```
 

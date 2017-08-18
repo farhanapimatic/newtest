@@ -1,5 +1,7 @@
 # Getting started
 
+Simple calculator API hosted on APIMATIC
+
 ## How to Build
 
 The generated code uses a few Maven dependencies e.g., Jackson, UniRest,
@@ -9,62 +11,62 @@ you will need internet access for a successful build.
 
 * In order to open the client library in Eclipse click on ``` File -> Import ```.
 
-![Importing SDK into Eclipse - Step 1](https://apidocs.io/illustration/java?step=import0&workspaceFolder=CalculatorService-Java&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Importing SDK into Eclipse - Step 1](https://apidocs.io/illustration/java?step=import0&workspaceFolder=APIMATIC%20Calculator-Java&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 * In the import dialog, select ``` Existing Java Project ``` and click ``` Next ```.
 
-![Importing SDK into Eclipse - Step 2](https://apidocs.io/illustration/java?step=import1&workspaceFolder=CalculatorService-Java&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Importing SDK into Eclipse - Step 2](https://apidocs.io/illustration/java?step=import1&workspaceFolder=APIMATIC%20Calculator-Java&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 * Browse to locate the folder containing the source code. Select the detected location of the project and click ``` Finish ```.
 
-![Importing SDK into Eclipse - Step 3](https://apidocs.io/illustration/java?step=import2&workspaceFolder=CalculatorService-Java&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Importing SDK into Eclipse - Step 3](https://apidocs.io/illustration/java?step=import2&workspaceFolder=APIMATIC%20Calculator-Java&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 * Upon successful import, the project will be automatically built by Eclipse after automatically resolving the dependencies.
 
-![Importing SDK into Eclipse - Step 4](https://apidocs.io/illustration/java?step=import3&workspaceFolder=CalculatorService-Java&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Importing SDK into Eclipse - Step 4](https://apidocs.io/illustration/java?step=import3&workspaceFolder=APIMATIC%20Calculator-Java&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 ## How to Use
 
-The following section explains how to use the CalculatorService library in a new console project.
+The following section explains how to use the APIMATICCalculator library in a new console project.
 
 ### 1. Starting a new project
 
 For starting a new project, click the menu command ``` File > New > Project ```.
 
-![Add a new project in Eclipse](https://apidocs.io/illustration/java?step=createNewProject0&workspaceFolder=CalculatorService-Java&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Add a new project in Eclipse](https://apidocs.io/illustration/java?step=createNewProject0&workspaceFolder=APIMATIC%20Calculator-Java&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 Next, choose ``` Maven > Maven Project ```and click ``` Next ```.
 
-![Create a new Maven Project - Step 1](https://apidocs.io/illustration/java?step=createNewProject1&workspaceFolder=CalculatorService-Java&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Create a new Maven Project - Step 1](https://apidocs.io/illustration/java?step=createNewProject1&workspaceFolder=APIMATIC%20Calculator-Java&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 Here, make sure to use the current workspace by choosing ``` Use default Workspace location ```, as shown in the picture below and click ``` Next ```.
 
-![Create a new Maven Project - Step 2](https://apidocs.io/illustration/java?step=createNewProject2&workspaceFolder=CalculatorService-Java&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Create a new Maven Project - Step 2](https://apidocs.io/illustration/java?step=createNewProject2&workspaceFolder=APIMATIC%20Calculator-Java&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 Following this, select the *quick start* project type to create a simple project with an existing class and a ``` main ``` method. To do this, choose ``` maven-archetype-quickstart ``` item from the list and click ``` Next ```.
 
-![Create a new Maven Project - Step 3](https://apidocs.io/illustration/java?step=createNewProject3&workspaceFolder=CalculatorService-Java&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Create a new Maven Project - Step 3](https://apidocs.io/illustration/java?step=createNewProject3&workspaceFolder=APIMATIC%20Calculator-Java&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 In the last step, provide a ``` Group Id ``` and ``` Artifact Id ``` as shown in the picture below and click ``` Finish ```.
 
-![Create a new Maven Project - Step 4](https://apidocs.io/illustration/java?step=createNewProject4&workspaceFolder=CalculatorService-Java&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Create a new Maven Project - Step 4](https://apidocs.io/illustration/java?step=createNewProject4&workspaceFolder=APIMATIC%20Calculator-Java&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 ### 2. Add reference of the library project
 
-The created Maven project manages its dependencies using its ``` pom.xml ``` file. In order to add a dependency on the *CalculatorServiceLib* client library, double click on the ``` pom.xml ``` file in the ``` Package Explorer ```. Opening the ``` pom.xml ``` file will render a graphical view on the cavas. Here, switch to the ``` Dependencies ``` tab and click the ``` Add ``` button as shown in the picture below.
+The created Maven project manages its dependencies using its ``` pom.xml ``` file. In order to add a dependency on the *APIMATICCalculatorLib* client library, double click on the ``` pom.xml ``` file in the ``` Package Explorer ```. Opening the ``` pom.xml ``` file will render a graphical view on the cavas. Here, switch to the ``` Dependencies ``` tab and click the ``` Add ``` button as shown in the picture below.
 
-![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/java?step=testProject0&workspaceFolder=CalculatorService-Java&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/java?step=testProject0&workspaceFolder=APIMATIC%20Calculator-Java&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
-Clicking the ``` Add ``` button will open a dialog where you need to specify CalculatorService in ``` Group Id ``` and CalculatorServiceLib in the ``` Artifact Id ``` fields. Once added click ``` OK ```. Save the ``` pom.xml ``` file.
+Clicking the ``` Add ``` button will open a dialog where you need to specify APIMATICCalculator in ``` Group Id ``` and APIMATICCalculatorLib in the ``` Artifact Id ``` fields. Once added click ``` OK ```. Save the ``` pom.xml ``` file.
 
-![Adding dependency to the client library - Step 2](https://apidocs.io/illustration/java?step=testProject1&workspaceFolder=CalculatorService-Java&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Adding dependency to the client library - Step 2](https://apidocs.io/illustration/java?step=testProject1&workspaceFolder=APIMATIC%20Calculator-Java&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 ### 3. Write sample code
 
 Once the ``` SimpleConsoleApp ``` is created, a file named ``` App.java ``` will be visible in the *Package Explorer* with a ``` main ``` method. This is the entry point for the execution of the created project.
 Here, you can add code to initialize the client library and instantiate a *Controller* class. Sample code to initialize the client library and using controller methods is given in the subsequent sections.
 
-![Adding dependency to the client library - Step 2](https://apidocs.io/illustration/java?step=testProject2&workspaceFolder=CalculatorService-Java&workspaceName=CalculatorService&projectName=CalculatorServiceLib&rootNamespace=org.example)
+![Adding dependency to the client library - Step 2](https://apidocs.io/illustration/java?step=testProject2&workspaceFolder=APIMATIC%20Calculator-Java&workspaceName=APIMATICCalculator&projectName=APIMATICCalculatorLib&rootNamespace=io.apimatic.examples)
 
 ## How to Test
 
@@ -73,18 +75,27 @@ JUnit is used as the testing framework and test runner.
 
 In Eclipse, for running the tests do the following:
 
-1. Select the project *CalculatorServiceLib* from the package explorer.
+1. Select the project *APIMATICCalculatorLib* from the package explorer.
 2. Select "Run -> Run as -> JUnit Test" or use "Alt + Shift + X" followed by "T" to run the Tests.
 
 ## Initialization
 
-### 
+### Authentication
+In order to setup authentication and initialization of the API client, you need the following information.
+
+| Parameter | Description |
+|-----------|-------------|
+| oAuthAccessToken | OAuth 2.0 Access Token |
+
+
 
 API client can be initialized as following.
 
 ```java
+// Configuration parameters and credentials
+String oAuthAccessToken = "oAuthAccessToken"; // OAuth 2.0 Access Token
 
-CalculatorServiceClient client = new CalculatorServiceClient();
+APIMATICCalculatorClient client = new APIMATICCalculatorClient(oAuthAccessToken);
 ```
 
 
@@ -92,29 +103,28 @@ CalculatorServiceClient client = new CalculatorServiceClient();
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [DefaultBindingICalculatorController](#default_binding_i_calculator_controller)
+* [APIController](#api_controller)
+* [SimpleCalculatorController](#simple_calculator_controller)
 
-## <a name="default_binding_i_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png "org.example.controllers.DefaultBindingICalculatorController") DefaultBindingICalculatorController
+## <a name="api_controller"></a>![Class: ](https://apidocs.io/img/class.png "io.apimatic.examples.controllers.APIController") APIController
 
 ### Get singleton instance
 
-The singleton instance of the ``` DefaultBindingICalculatorController ``` class can be accessed from the API Client.
+The singleton instance of the ``` APIController ``` class can be accessed from the API Client.
 
 ```java
-DefaultBindingICalculatorController defaultBindingICalculator = client.getDefaultBindingICalculator();
+APIController client = client.getClient();
 ```
 
-### <a name="add_async"></a>![Method: ](https://apidocs.io/img/method.png "org.example.controllers.DefaultBindingICalculatorController.addAsync") addAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="new_async"></a>![Method: ](https://apidocs.io/img/method.png "io.apimatic.examples.controllers.APIController.newAsync") newAsync
 
 > TODO: Add a method description
 
 
 ```java
-void addAsync(
-        final ICalculatorAddInputMessage body,
-        final APICallBack<ICalculatorAddOutputMessage> callBack)
+void newAsync(
+        final NewInput input,
+        final APICallBack<DynamicResponse> callBack)
 ```
 
 #### Parameters
@@ -122,22 +132,39 @@ void addAsync(
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | body |  ``` Required ```  | TODO: Add a parameter description |
+| cacheControl |  ``` Required ```  | TODO: Add a parameter description |
+| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| postmanToken |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
 
 ```java
 try {
-    ICalculatorAddInputMessage body = new ICalculatorAddInputMessage();
+NewInput collect = new NewInput();
+
+    NewRequest body = new NewRequest();
+collect.setBody(body);
+
+    String cacheControl = "cache-control";
+collect.setCacheControl(cacheControl);
+
+    String contentType = "content-type";
+collect.setContentType(contentType);
+
+    String postmanToken = "postman-token";
+collect.setPostmanToken(postmanToken);
+
     // Invoking the API call with sample inputs
-    defaultBindingICalculator.addAsync(body, new APICallBack<ICalculatorAddOutputMessage>() {
-        public void onSuccess(HttpContext context, ICalculatorAddOutputMessage response) {
+    client.newAsync(collect, new APICallBack<DynamicResponse>() {
+        public void onSuccess(HttpContext context, DynamicResponse response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    });
+    }
+);
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -145,44 +172,63 @@ try {
 ```
 
 
-### <a name="create_subtract_async"></a>![Method: ](https://apidocs.io/img/method.png "org.example.controllers.DefaultBindingICalculatorController.createSubtractAsync") createSubtractAsync
+[Back to List of Controllers](#list_of_controllers)
 
-> *Tags:*  ``` Skips Authentication ``` 
+## <a name="simple_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png "io.apimatic.examples.controllers.SimpleCalculatorController") SimpleCalculatorController
 
-> TODO: Add a method description
+### Get singleton instance
+
+The singleton instance of the ``` SimpleCalculatorController ``` class can be accessed from the API Client.
+
+```java
+SimpleCalculatorController simpleCalculator = client.getSimpleCalculator();
+```
+
+### <a name="get_calculate_async"></a>![Method: ](https://apidocs.io/img/method.png "io.apimatic.examples.controllers.SimpleCalculatorController.getCalculateAsync") getCalculateAsync
+
+> Calculates the expression using the specified operation.
 
 
 ```java
-void createSubtractAsync(
-        final ICalculatorSubtractInputMessage body,
-        final APICallBack<ICalculatorSubtractOutputMessage> callBack)
+void getCalculateAsync(
+        final GetCalculateInput input,
+        final APICallBack<Double> callBack)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
+| operation |  ``` Required ```  | The operator to apply on the variables |
+| x |  ``` Required ```  | The LHS value |
+| y |  ``` Required ```  | The RHS value |
 
 
 #### Example Usage
 
 ```java
-try {
-    ICalculatorSubtractInputMessage body = new ICalculatorSubtractInputMessage();
-    // Invoking the API call with sample inputs
-    defaultBindingICalculator.createSubtractAsync(body, new APICallBack<ICalculatorSubtractOutputMessage>() {
-        public void onSuccess(HttpContext context, ICalculatorSubtractOutputMessage response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
+GetCalculateInput collect = new GetCalculateInput();
+
+OperationTypeEnum operation = OperationTypeEnum.fromString("MULTIPLY");
+collect.setOperation(operation);
+
+double x = 4;
+collect.setX(x);
+
+double y = 5;
+collect.setY(y);
+
+// Invoking the API call with sample inputs
+simpleCalculator.getCalculateAsync(collect, new APICallBack<Double>() {
+    public void onSuccess(HttpContext context, Double response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
 }
+);
+
 ```
 
 
